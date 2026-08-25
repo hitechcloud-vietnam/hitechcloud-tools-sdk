@@ -1,16 +1,18 @@
+using System.Collections.Generic;
+using System.Threading.Tasks;
+
 namespace HiTechCloud.Tools.Resources;
 
 /// <summary>Mạng & Hạ tầng (46 endpoints)</summary>
 public class MangAndHaTangResource
 {
-    private readonly HttpClient _http;
-    public MangAndHaTangResource(HttpClient http) { _http = http; }
+    private readonly HttpClientWrapper _http;
+    public MangAndHaTangResource(HttpClientWrapper http) { _http = http; }
 
     /// <summary>GET /api/geoip/batch - Tra vị trí địa lý cho nhiều địa chỉ IP trong m...</summary>
     public async Task<Dictionary<string, object>> geoipbatch(Dictionary<string, string> p = null) => await _http.GetAsync("/api/geoip/batch", p);
 
     /// <summary>GET /api/geoip/batch - Như `GET api/geoip/batch` nhưng nhận danh sách...</summary>
-    public async Task<Dictionary<string, object>> geoipbatch(Dictionary<string, string> p = null) => await _http.GetAsync("/api/geoip/batch", p);
 
     /// <summary>POST /api/geoip/lookup - Vị trí địa lý của một địa chỉ IPv4 hoặc IPv6:...</summary>
     public async Task<Dictionary<string, object>> geoiplookup(Dictionary<string, object> d = null) => await _http.PostAsync("/api/geoip/lookup", d);
@@ -133,7 +135,6 @@ public class MangAndHaTangResource
     public async Task<Dictionary<string, object>> webriskbatch(Dictionary<string, string> p = null) => await _http.GetAsync("/api/webrisk/batch", p);
 
     /// <summary>GET /api/webrisk/batch - Như `GET api/webrisk/batch` nhưng nhận danh sá...</summary>
-    public async Task<Dictionary<string, object>> webriskbatch(Dictionary<string, string> p = null) => await _http.GetAsync("/api/webrisk/batch", p);
 
     /// <summary>POST /api/webrisk/lookup - Đối chiếu một URL với danh sách đe doạ của Goo...</summary>
     public async Task<Dictionary<string, object>> webrisklookup(Dictionary<string, object> d = null) => await _http.PostAsync("/api/webrisk/lookup", d);

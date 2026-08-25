@@ -1,10 +1,13 @@
+using System.Collections.Generic;
+using System.Threading.Tasks;
+
 namespace HiTechCloud.Tools.Resources;
 
 /// <summary>Mã hoá & Kiểm tra (39 endpoints)</summary>
 public class MaHoaAndKiemTraResource
 {
-    private readonly HttpClient _http;
-    public MaHoaAndKiemTraResource(HttpClient http) { _http = http; }
+    private readonly HttpClientWrapper _http;
+    public MaHoaAndKiemTraResource(HttpClientWrapper http) { _http = http; }
 
     /// <summary>GET /api/tools/crypto/base64/decode - Giải mã chuỗi Base64 về dạng gốc</summary>
     public async Task<Dictionary<string, object>> toolscryptobase64decode(Dictionary<string, string> p = null) => await _http.GetAsync("/api/tools/crypto/base64/decode", p);
@@ -43,7 +46,6 @@ public class MaHoaAndKiemTraResource
     public async Task<Dictionary<string, object>> utilitychecksumcontainer(Dictionary<string, string> p = null) => await _http.GetAsync("/api/utility/checksum/container", p);
 
     /// <summary>GET /api/utility/checksum/container - Kiểm số công-ten-nơ theo ISO 6346</summary>
-    public async Task<Dictionary<string, object>> utilitychecksumcontainer(Dictionary<string, string> p = null) => await _http.GetAsync("/api/utility/checksum/container", p);
 
     /// <summary>POST /api/utility/checksum/hash - Tổng kiểm tra của một khối dữ liệu: CRC-32</summary>
     public async Task<Dictionary<string, object>> utilitychecksumhash(Dictionary<string, object> d = null) => await _http.PostAsync("/api/utility/checksum/hash", d);

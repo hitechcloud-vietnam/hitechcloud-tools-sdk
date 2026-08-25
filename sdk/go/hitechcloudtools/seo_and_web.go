@@ -10,10 +10,6 @@ func (r *SeoAndWebResource) DomainRankBatch(params map[string]string) (map[strin
 	return r.client.Get("/api/domain/rank/batch", params)
 }
 
-// DomainRankBatch - Tra hạng cho tối đa 100 tên miền trong một lượ...
-func (r *SeoAndWebResource) DomainRankBatch(params map[string]string) (map[string]interface{}, error) {
-	return r.client.Get("/api/domain/rank/batch", params)
-}
 
 // DomainRankTop - Nhóm tên miền dẫn đầu
 func (r *SeoAndWebResource) DomainRankTop(body interface{}) (map[string]interface{}, error) {

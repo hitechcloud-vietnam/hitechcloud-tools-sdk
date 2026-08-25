@@ -60,10 +60,6 @@ func (r *TaiChinhAndTyGiaResource) UtilityFinanceCashflow(params map[string]stri
 	return r.client.Get("/api/utility/finance/cashflow", params)
 }
 
-// UtilityFinanceCashflow - Giá trị hiện tại ròng và tỉ suất hoàn vốn nội...
-func (r *TaiChinhAndTyGiaResource) UtilityFinanceCashflow(params map[string]string) (map[string]interface{}, error) {
-	return r.client.Get("/api/utility/finance/cashflow", params)
-}
 
 // UtilityFinanceCompound - Lãi kép có hoặc không có khoản góp định kỳ
 func (r *TaiChinhAndTyGiaResource) UtilityFinanceCompound(body interface{}) (map[string]interface{}, error) {

@@ -35,10 +35,6 @@ func (r *DuLieuVietNamResource) OpendataAdminResolve(params map[string]string) (
 	return r.client.Get("/api/opendata/admin/resolve", params)
 }
 
-// OpendataAdminResolve - Cùng phép đoán như bản GET nhưng nhận nhiều đị...
-func (r *DuLieuVietNamResource) OpendataAdminResolve(params map[string]string) (map[string]interface{}, error) {
-	return r.client.Get("/api/opendata/admin/resolve", params)
-}
 
 // OpendataAdminSearch - Tìm đơn vị hành chính theo tên
 func (r *DuLieuVietNamResource) OpendataAdminSearch(body interface{}) (map[string]interface{}, error) {
@@ -135,10 +131,6 @@ func (r *DuLieuVietNamResource) VnConvert(params map[string]string) (map[string]
 	return r.client.Get("/api/vn/convert", params)
 }
 
-// VnConvert - Chuyển cả lô tối đa 25 địa chỉ cũ sang địa giớ...
-func (r *DuLieuVietNamResource) VnConvert(params map[string]string) (map[string]interface{}, error) {
-	return r.client.Get("/api/vn/convert", params)
-}
 
 // VnDivisions - Toàn bộ cây danh mục hành chính hiện hành tron...
 func (r *DuLieuVietNamResource) VnDivisions(body interface{}) (map[string]interface{}, error) {

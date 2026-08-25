@@ -1,10 +1,13 @@
+using System.Collections.Generic;
+using System.Threading.Tasks;
+
 namespace HiTechCloud.Tools.Resources;
 
 /// <summary>Dữ liệu Việt Nam (66 endpoints)</summary>
 public class DuLieuVietNamResource
 {
-    private readonly HttpClient _http;
-    public DuLieuVietNamResource(HttpClient http) { _http = http; }
+    private readonly HttpClientWrapper _http;
+    public DuLieuVietNamResource(HttpClientWrapper http) { _http = http; }
 
     /// <summary>POST /api/countries - Danh sách quốc gia kèm mã ISO và mã điện thoại</summary>
     public async Task<Dictionary<string, object>> countries(Dictionary<string, object> d = null) => await _http.PostAsync("/api/countries", d);
@@ -25,7 +28,6 @@ public class DuLieuVietNamResource
     public async Task<Dictionary<string, object>> opendataadminresolve(Dictionary<string, string> p = null) => await _http.GetAsync("/api/opendata/admin/resolve", p);
 
     /// <summary>GET /api/opendata/admin/resolve - Cùng phép đoán như bản GET nhưng nhận nhiều đị...</summary>
-    public async Task<Dictionary<string, object>> opendataadminresolve(Dictionary<string, string> p = null) => await _http.GetAsync("/api/opendata/admin/resolve", p);
 
     /// <summary>POST /api/opendata/admin/search - Tìm đơn vị hành chính theo tên</summary>
     public async Task<Dictionary<string, object>> opendataadminsearch(Dictionary<string, object> d = null) => await _http.PostAsync("/api/opendata/admin/search", d);
@@ -85,7 +87,6 @@ public class DuLieuVietNamResource
     public async Task<Dictionary<string, object>> vnconvert(Dictionary<string, string> p = null) => await _http.GetAsync("/api/vn/convert", p);
 
     /// <summary>GET /api/vn/convert - Chuyển cả lô tối đa 25 địa chỉ cũ sang địa giớ...</summary>
-    public async Task<Dictionary<string, object>> vnconvert(Dictionary<string, string> p = null) => await _http.GetAsync("/api/vn/convert", p);
 
     /// <summary>POST /api/vn/divisions - Toàn bộ cây danh mục hành chính hiện hành tron...</summary>
     public async Task<Dictionary<string, object>> vndivisions(Dictionary<string, object> d = null) => await _http.PostAsync("/api/vn/divisions", d);

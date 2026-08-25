@@ -1,10 +1,13 @@
+using System.Collections.Generic;
+using System.Threading.Tasks;
+
 namespace HiTechCloud.Tools.Resources;
 
 /// <summary>Thời gian & Lịch (18 endpoints)</summary>
 public class ThoiGianAndLichResource
 {
-    private readonly HttpClient _http;
-    public ThoiGianAndLichResource(HttpClient http) { _http = http; }
+    private readonly HttpClientWrapper _http;
+    public ThoiGianAndLichResource(HttpClientWrapper http) { _http = http; }
 
     /// <summary>GET /api/convert/to/lunar - Đổi ngày dương lịch sang âm lịch</summary>
     public async Task<Dictionary<string, object>> converttolunar(Dictionary<string, string> p = null) => await _http.GetAsync("/api/convert/to/lunar", p);
@@ -34,7 +37,6 @@ public class ThoiGianAndLichResource
     public async Task<Dictionary<string, object>> utilitytimebusinessdays(Dictionary<string, string> p = null) => await _http.GetAsync("/api/utility/time/business/days", p);
 
     /// <summary>GET /api/utility/time/business/days - Đếm số ngày làm việc giữa hai ngày</summary>
-    public async Task<Dictionary<string, object>> utilitytimebusinessdays(Dictionary<string, string> p = null) => await _http.GetAsync("/api/utility/time/business/days", p);
 
     /// <summary>POST /api/utility/time/diff - Khoảng cách giữa hai mốc</summary>
     public async Task<Dictionary<string, object>> utilitytimediff(Dictionary<string, object> d = null) => await _http.PostAsync("/api/utility/time/diff", d);

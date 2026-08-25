@@ -1,10 +1,13 @@
+using System.Collections.Generic;
+using System.Threading.Tasks;
+
 namespace HiTechCloud.Tools.Resources;
 
 /// <summary>Tài chính & Tỷ giá (16 endpoints)</summary>
 public class TaiChinhAndTyGiaResource
 {
-    private readonly HttpClient _http;
-    public TaiChinhAndTyGiaResource(HttpClient http) { _http = http; }
+    private readonly HttpClientWrapper _http;
+    public TaiChinhAndTyGiaResource(HttpClientWrapper http) { _http = http; }
 
     /// <summary>GET /api/fx/convert - Quy đổi một số tiền giữa hai đồng tiền</summary>
     public async Task<Dictionary<string, object>> fxconvert(Dictionary<string, string> p = null) => await _http.GetAsync("/api/fx/convert", p);
@@ -40,7 +43,6 @@ public class TaiChinhAndTyGiaResource
     public async Task<Dictionary<string, object>> utilityfinancecashflow(Dictionary<string, string> p = null) => await _http.GetAsync("/api/utility/finance/cashflow", p);
 
     /// <summary>GET /api/utility/finance/cashflow - Giá trị hiện tại ròng và tỉ suất hoàn vốn nội...</summary>
-    public async Task<Dictionary<string, object>> utilityfinancecashflow(Dictionary<string, string> p = null) => await _http.GetAsync("/api/utility/finance/cashflow", p);
 
     /// <summary>POST /api/utility/finance/compound - Lãi kép có hoặc không có khoản góp định kỳ</summary>
     public async Task<Dictionary<string, object>> utilityfinancecompound(Dictionary<string, object> d = null) => await _http.PostAsync("/api/utility/finance/compound", d);

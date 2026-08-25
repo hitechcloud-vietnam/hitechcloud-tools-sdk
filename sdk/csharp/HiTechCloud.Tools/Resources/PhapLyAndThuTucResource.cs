@@ -1,16 +1,18 @@
+using System.Collections.Generic;
+using System.Threading.Tasks;
+
 namespace HiTechCloud.Tools.Resources;
 
 /// <summary>Pháp lý & Thủ tục (28 endpoints)</summary>
 public class PhapLyAndThuTucResource
 {
-    private readonly HttpClient _http;
-    public PhapLyAndThuTucResource(HttpClient http) { _http = http; }
+    private readonly HttpClientWrapper _http;
+    public PhapLyAndThuTucResource(HttpClientWrapper http) { _http = http; }
 
     /// <summary>GET /api/dauthau/detail - Chi tiết một gói thầu: bên mời thầu</summary>
     public async Task<Dictionary<string, object>> dauthaudetail(Dictionary<string, string> p = null) => await _http.GetAsync("/api/dauthau/detail", p);
 
     /// <summary>GET /api/dauthau/detail - Chi tiết gói thầu</summary>
-    public async Task<Dictionary<string, object>> dauthaudetail(Dictionary<string, string> p = null) => await _http.GetAsync("/api/dauthau/detail", p);
 
     /// <summary>POST /api/dauthau/summary - Danh sách gói thầu theo bộ lọc</summary>
     public async Task<Dictionary<string, object>> dauthausummary(Dictionary<string, object> d = null) => await _http.PostAsync("/api/dauthau/summary", d);

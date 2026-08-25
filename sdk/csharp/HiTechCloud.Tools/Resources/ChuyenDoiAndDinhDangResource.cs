@@ -1,10 +1,13 @@
+using System.Collections.Generic;
+using System.Threading.Tasks;
+
 namespace HiTechCloud.Tools.Resources;
 
 /// <summary>Chuyển đổi & Định dạng (45 endpoints)</summary>
 public class ChuyenDoiAndDinhDangResource
 {
-    private readonly HttpClient _http;
-    public ChuyenDoiAndDinhDangResource(HttpClient http) { _http = http; }
+    private readonly HttpClientWrapper _http;
+    public ChuyenDoiAndDinhDangResource(HttpClientWrapper http) { _http = http; }
 
     /// <summary>GET /api/barcode/check/digit - Tính chữ số kiểm tra cho phần thân mã chưa có...</summary>
     public async Task<Dictionary<string, object>> barcodecheckdigit(Dictionary<string, string> p = null) => await _http.GetAsync("/api/barcode/check/digit", p);
@@ -13,7 +16,6 @@ public class ChuyenDoiAndDinhDangResource
     public async Task<Dictionary<string, object>> barcodegs1parse(Dictionary<string, string> p = null) => await _http.GetAsync("/api/barcode/gs1/parse", p);
 
     /// <summary>GET /api/barcode/gs1/parse - Như bản GET nhưng nhận chuỗi trong thân yêu cầ...</summary>
-    public async Task<Dictionary<string, object>> barcodegs1parse(Dictionary<string, string> p = null) => await _http.GetAsync("/api/barcode/gs1/parse", p);
 
     /// <summary>POST /api/barcode/prefix - Tra tổ chức đã cấp một dải mã theo ba chữ số đ...</summary>
     public async Task<Dictionary<string, object>> barcodeprefix(Dictionary<string, object> d = null) => await _http.PostAsync("/api/barcode/prefix", d);
@@ -25,7 +27,6 @@ public class ChuyenDoiAndDinhDangResource
     public async Task<Dictionary<string, object>> barcodevalidate(Dictionary<string, string> p = null) => await _http.GetAsync("/api/barcode/validate", p);
 
     /// <summary>GET /api/barcode/validate - Như bản GET nhưng nhận danh sách mã trong thân...</summary>
-    public async Task<Dictionary<string, object>> barcodevalidate(Dictionary<string, string> p = null) => await _http.GetAsync("/api/barcode/validate", p);
 
     /// <summary>POST /api/opendata/text/inspect - Bóc chuỗi thành từng ký tự kèm mã điểm Unicode</summary>
     public async Task<Dictionary<string, object>> opendatatextinspect(Dictionary<string, object> d = null) => await _http.PostAsync("/api/opendata/text/inspect", d);
@@ -103,7 +104,6 @@ public class ChuyenDoiAndDinhDangResource
     public async Task<Dictionary<string, object>> utilitytextcase(Dictionary<string, string> p = null) => await _http.GetAsync("/api/utility/text/case", p);
 
     /// <summary>GET /api/utility/text/case - Đổi kiểu viết định danh: camelCase</summary>
-    public async Task<Dictionary<string, object>> utilitytextcase(Dictionary<string, string> p = null) => await _http.GetAsync("/api/utility/text/case", p);
 
     /// <summary>POST /api/utility/text/inspect - Soi một đoạn văn bản: bốn cách đếm độ dài (byt...</summary>
     public async Task<Dictionary<string, object>> utilitytextinspect(Dictionary<string, object> d = null) => await _http.PostAsync("/api/utility/text/inspect", d);

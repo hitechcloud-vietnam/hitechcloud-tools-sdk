@@ -25,10 +25,6 @@ func (r *TenMienAndSslResource) DomainCheck2(body interface{}) (map[string]inter
 	return r.client.Post("/api/domain/check/2", body)
 }
 
-// DomainCheck - Kiểm tra tên miền còn trống hay đã đăng ký
-func (r *TenMienAndSslResource) DomainCheck(params map[string]string) (map[string]interface{}, error) {
-	return r.client.Get("/api/domain/check", params)
-}
 
 // DomainWhois - Bản ghi WHOIS đầy đủ của tên miền
 func (r *TenMienAndSslResource) DomainWhois(params map[string]string) (map[string]interface{}, error) {

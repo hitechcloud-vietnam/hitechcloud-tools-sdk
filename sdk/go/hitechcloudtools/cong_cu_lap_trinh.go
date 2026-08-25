@@ -35,10 +35,6 @@ func (r *CongCuLapTrinhResource) ToolsDevJsonFormatter(params map[string]string)
 	return r.client.Get("/api/tools/dev/json/formatter", params)
 }
 
-// ToolsDevJsonFormatter - Định dạng JSON qua thân yêu cầu
-func (r *CongCuLapTrinhResource) ToolsDevJsonFormatter(params map[string]string) (map[string]interface{}, error) {
-	return r.client.Get("/api/tools/dev/json/formatter", params)
-}
 
 // ToolsDevLoremIpsum - Sinh đoạn văn mẫu để lấp chỗ khi dựng giao diệ...
 func (r *CongCuLapTrinhResource) ToolsDevLoremIpsum(body interface{}) (map[string]interface{}, error) {
@@ -75,10 +71,6 @@ func (r *CongCuLapTrinhResource) UtilityFileIdentify(body interface{}) (map[stri
 	return r.client.Post("/api/utility/file/identify", body)
 }
 
-// UtilityFileIdentify - Nhận dạng định dạng tệp từ những byte ĐẦU TIÊN
-func (r *CongCuLapTrinhResource) UtilityFileIdentify(params map[string]string) (map[string]interface{}, error) {
-	return r.client.Get("/api/utility/file/identify", params)
-}
 
 // UtilityFileMime - Kiểu MIME của một đuôi tệp
 func (r *CongCuLapTrinhResource) UtilityFileMime(body interface{}) (map[string]interface{}, error) {

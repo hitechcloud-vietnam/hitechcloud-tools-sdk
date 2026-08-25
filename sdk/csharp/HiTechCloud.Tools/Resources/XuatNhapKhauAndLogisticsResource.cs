@@ -1,10 +1,13 @@
+using System.Collections.Generic;
+using System.Threading.Tasks;
+
 namespace HiTechCloud.Tools.Resources;
 
 /// <summary>Xuất nhập khẩu & Logistics (15 endpoints)</summary>
 public class XuatNhapKhauAndLogisticsResource
 {
-    private readonly HttpClient _http;
-    public XuatNhapKhauAndLogisticsResource(HttpClient http) { _http = http; }
+    private readonly HttpClientWrapper _http;
+    public XuatNhapKhauAndLogisticsResource(HttpClientWrapper http) { _http = http; }
 
     /// <summary>GET /api/airports/country - Sân bay của một quốc gia</summary>
     public async Task<Dictionary<string, object>> airportscountry(Dictionary<string, string> p = null) => await _http.GetAsync("/api/airports/country", p);

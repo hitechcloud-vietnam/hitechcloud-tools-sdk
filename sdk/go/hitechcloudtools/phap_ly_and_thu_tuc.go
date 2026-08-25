@@ -10,20 +10,12 @@ func (r *PhapLyAndThuTucResource) DauthauDetail(params map[string]string) (map[s
 	return r.client.Get("/api/dauthau/detail", params)
 }
 
-// DauthauDetail - Chi tiết gói thầu
-func (r *PhapLyAndThuTucResource) DauthauDetail(params map[string]string) (map[string]interface{}, error) {
-	return r.client.Get("/api/dauthau/detail", params)
-}
 
 // DauthauSummary - Danh sách gói thầu theo bộ lọc
 func (r *PhapLyAndThuTucResource) DauthauSummary(body interface{}) (map[string]interface{}, error) {
 	return r.client.Post("/api/dauthau/summary", body)
 }
 
-// DauthauSummary - Cùng dữ liệu tóm tắt gói thầu
-func (r *PhapLyAndThuTucResource) DauthauSummary(params map[string]string) (map[string]interface{}, error) {
-	return r.client.Get("/api/dauthau/summary", params)
-}
 
 // GovAgencies - Danh mục cơ quan ban hành có văn bản trong bản...
 func (r *PhapLyAndThuTucResource) GovAgencies(body interface{}) (map[string]interface{}, error) {

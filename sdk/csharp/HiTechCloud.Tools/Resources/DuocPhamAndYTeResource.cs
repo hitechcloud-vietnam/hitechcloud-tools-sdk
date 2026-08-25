@@ -1,10 +1,13 @@
+using System.Collections.Generic;
+using System.Threading.Tasks;
+
 namespace HiTechCloud.Tools.Resources;
 
 /// <summary>Dược phẩm & Y tế (5 endpoints)</summary>
 public class DuocPhamAndYTeResource
 {
-    private readonly HttpClient _http;
-    public DuocPhamAndYTeResource(HttpClient http) { _http = http; }
+    private readonly HttpClientWrapper _http;
+    public DuocPhamAndYTeResource(HttpClientWrapper http) { _http = http; }
 
     /// <summary>GET /api/health/drug/prices - Tra các lượt kê khai giá bán buôn thuốc dự kiế...</summary>
     public async Task<Dictionary<string, object>> healthdrugprices(Dictionary<string, string> p = null) => await _http.GetAsync("/api/health/drug/prices", p);

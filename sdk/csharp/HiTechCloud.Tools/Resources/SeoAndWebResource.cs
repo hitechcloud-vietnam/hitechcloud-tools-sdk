@@ -1,16 +1,18 @@
+using System.Collections.Generic;
+using System.Threading.Tasks;
+
 namespace HiTechCloud.Tools.Resources;
 
 /// <summary>SEO & Web (13 endpoints)</summary>
 public class SeoAndWebResource
 {
-    private readonly HttpClient _http;
-    public SeoAndWebResource(HttpClient http) { _http = http; }
+    private readonly HttpClientWrapper _http;
+    public SeoAndWebResource(HttpClientWrapper http) { _http = http; }
 
     /// <summary>GET /api/domain/rank/batch - Tra hạng cho tối đa 100 tên miền trong một lượ...</summary>
     public async Task<Dictionary<string, object>> domainrankbatch(Dictionary<string, string> p = null) => await _http.GetAsync("/api/domain/rank/batch", p);
 
     /// <summary>GET /api/domain/rank/batch - Tra hạng cho tối đa 100 tên miền trong một lượ...</summary>
-    public async Task<Dictionary<string, object>> domainrankbatch(Dictionary<string, string> p = null) => await _http.GetAsync("/api/domain/rank/batch", p);
 
     /// <summary>POST /api/domain/rank/top - Nhóm tên miền dẫn đầu</summary>
     public async Task<Dictionary<string, object>> domainranktop(Dictionary<string, object> d = null) => await _http.PostAsync("/api/domain/rank/top", d);

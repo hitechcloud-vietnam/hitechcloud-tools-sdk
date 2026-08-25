@@ -1,10 +1,13 @@
+using System.Collections.Generic;
+using System.Threading.Tasks;
+
 namespace HiTechCloud.Tools.Resources;
 
 /// <summary>Doanh nghiệp & Thuế (64 endpoints)</summary>
 public class DoanhNghiepAndThueResource
 {
-    private readonly HttpClient _http;
-    public DoanhNghiepAndThueResource(HttpClient http) { _http = http; }
+    private readonly HttpClientWrapper _http;
+    public DoanhNghiepAndThueResource(HttpClientWrapper http) { _http = http; }
 
     /// <summary>POST /api/baocaodientu - Báo cáo điện tử của doanh nghiệp</summary>
     public async Task<Dictionary<string, object>> baocaodientu(Dictionary<string, object> d = null) => await _http.PostAsync("/api/baocaodientu", d);

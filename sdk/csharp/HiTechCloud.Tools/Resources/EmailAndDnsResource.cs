@@ -1,10 +1,13 @@
+using System.Collections.Generic;
+using System.Threading.Tasks;
+
 namespace HiTechCloud.Tools.Resources;
 
 /// <summary>Email & DNS (17 endpoints)</summary>
 public class EmailAndDnsResource
 {
-    private readonly HttpClient _http;
-    public EmailAndDnsResource(HttpClient http) { _http = http; }
+    private readonly HttpClientWrapper _http;
+    public EmailAndDnsResource(HttpClientWrapper http) { _http = http; }
 
     /// <summary>GET /api/infra/dns/rrtypes - Danh mục loại bản ghi DNS kèm số hiệu và ý ngh...</summary>
     public async Task<Dictionary<string, object>> infradnsrrtypes(Dictionary<string, string> p = null) => await _http.GetAsync("/api/infra/dns/rrtypes", p);

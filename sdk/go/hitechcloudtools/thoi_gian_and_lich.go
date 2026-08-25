@@ -50,10 +50,6 @@ func (r *ThoiGianAndLichResource) UtilityTimeBusinessDays(params map[string]stri
 	return r.client.Get("/api/utility/time/business/days", params)
 }
 
-// UtilityTimeBusinessDays - Đếm số ngày làm việc giữa hai ngày
-func (r *ThoiGianAndLichResource) UtilityTimeBusinessDays(params map[string]string) (map[string]interface{}, error) {
-	return r.client.Get("/api/utility/time/business/days", params)
-}
 
 // UtilityTimeDiff - Khoảng cách giữa hai mốc
 func (r *ThoiGianAndLichResource) UtilityTimeDiff(body interface{}) (map[string]interface{}, error) {

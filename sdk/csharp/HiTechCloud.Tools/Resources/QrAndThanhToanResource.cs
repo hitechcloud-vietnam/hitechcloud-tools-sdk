@@ -1,10 +1,13 @@
+using System.Collections.Generic;
+using System.Threading.Tasks;
+
 namespace HiTechCloud.Tools.Resources;
 
 /// <summary>QR & Thanh toán (5 endpoints)</summary>
 public class QrAndThanhToanResource
 {
-    private readonly HttpClient _http;
-    public QrAndThanhToanResource(HttpClient http) { _http = http; }
+    private readonly HttpClientWrapper _http;
+    public QrAndThanhToanResource(HttpClientWrapper http) { _http = http; }
 
     /// <summary>GET /api/banks - Danh bạ ngân hàng Việt Nam (65 ngân hàng): mã...</summary>
     public async Task<Dictionary<string, object>> banks(Dictionary<string, string> p = null) => await _http.GetAsync("/api/banks", p);

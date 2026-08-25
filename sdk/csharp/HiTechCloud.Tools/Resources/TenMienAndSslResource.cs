@@ -1,10 +1,13 @@
+using System.Collections.Generic;
+using System.Threading.Tasks;
+
 namespace HiTechCloud.Tools.Resources;
 
 /// <summary>Tên miền & SSL (53 endpoints)</summary>
 public class TenMienAndSslResource
 {
-    private readonly HttpClient _http;
-    public TenMienAndSslResource(HttpClient http) { _http = http; }
+    private readonly HttpClientWrapper _http;
+    public TenMienAndSslResource(HttpClientWrapper http) { _http = http; }
 
     /// <summary>GET /api/cert/log/logs - Danh bạ các log minh bạch chứng chỉ mà chính s...</summary>
     public async Task<Dictionary<string, object>> certloglogs(Dictionary<string, string> p = null) => await _http.GetAsync("/api/cert/log/logs", p);
@@ -19,7 +22,6 @@ public class TenMienAndSslResource
     public async Task<Dictionary<string, object>> domaincheck2(Dictionary<string, object> d = null) => await _http.PostAsync("/api/domain/check/2", d);
 
     /// <summary>GET /api/domain/check - Kiểm tra tên miền còn trống hay đã đăng ký</summary>
-    public async Task<Dictionary<string, object>> domaincheck(Dictionary<string, string> p = null) => await _http.GetAsync("/api/domain/check", p);
 
     /// <summary>GET /api/domain/whois - Bản ghi WHOIS đầy đủ của tên miền</summary>
     public async Task<Dictionary<string, object>> domainwhois(Dictionary<string, string> p = null) => await _http.GetAsync("/api/domain/whois", p);

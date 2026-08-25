@@ -1,10 +1,13 @@
+using System.Collections.Generic;
+using System.Threading.Tasks;
+
 namespace HiTechCloud.Tools.Resources;
 
 /// <summary>Công cụ lập trình (25 endpoints)</summary>
 public class CongCuLapTrinhResource
 {
-    private readonly HttpClient _http;
-    public CongCuLapTrinhResource(HttpClient http) { _http = http; }
+    private readonly HttpClientWrapper _http;
+    public CongCuLapTrinhResource(HttpClientWrapper http) { _http = http; }
 
     /// <summary>GET /api/infra/lifecycle/check - Phiên bản khách đang chạy còn được vá bảo mật...</summary>
     public async Task<Dictionary<string, object>> infralifecyclecheck(Dictionary<string, string> p = null) => await _http.GetAsync("/api/infra/lifecycle/check", p);
@@ -25,7 +28,6 @@ public class CongCuLapTrinhResource
     public async Task<Dictionary<string, object>> toolsdevjsonformatter(Dictionary<string, string> p = null) => await _http.GetAsync("/api/tools/dev/json/formatter", p);
 
     /// <summary>GET /api/tools/dev/json/formatter - Định dạng JSON qua thân yêu cầu</summary>
-    public async Task<Dictionary<string, object>> toolsdevjsonformatter(Dictionary<string, string> p = null) => await _http.GetAsync("/api/tools/dev/json/formatter", p);
 
     /// <summary>POST /api/tools/dev/lorem/ipsum - Sinh đoạn văn mẫu để lấp chỗ khi dựng giao diệ...</summary>
     public async Task<Dictionary<string, object>> toolsdevloremipsum(Dictionary<string, object> d = null) => await _http.PostAsync("/api/tools/dev/lorem/ipsum", d);

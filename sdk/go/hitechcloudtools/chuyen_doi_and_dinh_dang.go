@@ -15,10 +15,6 @@ func (r *ChuyenDoiAndDinhDangResource) BarcodeGs1Parse(params map[string]string)
 	return r.client.Get("/api/barcode/gs1/parse", params)
 }
 
-// BarcodeGs1Parse - Như bản GET nhưng nhận chuỗi trong thân yêu cầ...
-func (r *ChuyenDoiAndDinhDangResource) BarcodeGs1Parse(params map[string]string) (map[string]interface{}, error) {
-	return r.client.Get("/api/barcode/gs1/parse", params)
-}
 
 // BarcodePrefix - Tra tổ chức đã cấp một dải mã theo ba chữ số đ...
 func (r *ChuyenDoiAndDinhDangResource) BarcodePrefix(body interface{}) (map[string]interface{}, error) {
@@ -35,10 +31,6 @@ func (r *ChuyenDoiAndDinhDangResource) BarcodeValidate(params map[string]string)
 	return r.client.Get("/api/barcode/validate", params)
 }
 
-// BarcodeValidate - Như bản GET nhưng nhận danh sách mã trong thân...
-func (r *ChuyenDoiAndDinhDangResource) BarcodeValidate(params map[string]string) (map[string]interface{}, error) {
-	return r.client.Get("/api/barcode/validate", params)
-}
 
 // OpendataTextInspect - Bóc chuỗi thành từng ký tự kèm mã điểm Unicode
 func (r *ChuyenDoiAndDinhDangResource) OpendataTextInspect(body interface{}) (map[string]interface{}, error) {
@@ -165,60 +157,36 @@ func (r *ChuyenDoiAndDinhDangResource) UtilityTextCase(params map[string]string)
 	return r.client.Get("/api/utility/text/case", params)
 }
 
-// UtilityTextCase - Đổi kiểu viết định danh: camelCase
-func (r *ChuyenDoiAndDinhDangResource) UtilityTextCase(params map[string]string) (map[string]interface{}, error) {
-	return r.client.Get("/api/utility/text/case", params)
-}
 
 // UtilityTextInspect - Soi một đoạn văn bản: bốn cách đếm độ dài (byt...
 func (r *ChuyenDoiAndDinhDangResource) UtilityTextInspect(body interface{}) (map[string]interface{}, error) {
 	return r.client.Post("/api/utility/text/inspect", body)
 }
 
-// UtilityTextInspect - Soi một đoạn văn bản: bốn cách đếm độ dài (byt...
-func (r *ChuyenDoiAndDinhDangResource) UtilityTextInspect(params map[string]string) (map[string]interface{}, error) {
-	return r.client.Get("/api/utility/text/inspect", params)
-}
 
 // UtilityTextNormalize - Chuẩn hoá Unicode về NFC
 func (r *ChuyenDoiAndDinhDangResource) UtilityTextNormalize(body interface{}) (map[string]interface{}, error) {
 	return r.client.Post("/api/utility/text/normalize", body)
 }
 
-// UtilityTextNormalize - Chuẩn hoá Unicode về NFC
-func (r *ChuyenDoiAndDinhDangResource) UtilityTextNormalize(params map[string]string) (map[string]interface{}, error) {
-	return r.client.Get("/api/utility/text/normalize", params)
-}
 
 // UtilityTextSlug - Sinh chuỗi thân thiện với URL từ văn bản bất k...
 func (r *ChuyenDoiAndDinhDangResource) UtilityTextSlug(body interface{}) (map[string]interface{}, error) {
 	return r.client.Post("/api/utility/text/slug", body)
 }
 
-// UtilityTextSlug - Sinh chuỗi thân thiện với URL từ văn bản bất k...
-func (r *ChuyenDoiAndDinhDangResource) UtilityTextSlug(params map[string]string) (map[string]interface{}, error) {
-	return r.client.Get("/api/utility/text/slug", params)
-}
 
 // UtilityTextTransliterate - Chuyển tự giữa các hệ chữ viết: sang chữ Latin...
 func (r *ChuyenDoiAndDinhDangResource) UtilityTextTransliterate(body interface{}) (map[string]interface{}, error) {
 	return r.client.Post("/api/utility/text/transliterate", body)
 }
 
-// UtilityTextTransliterate - Chuyển tự giữa các hệ chữ viết: sang chữ Latin...
-func (r *ChuyenDoiAndDinhDangResource) UtilityTextTransliterate(params map[string]string) (map[string]interface{}, error) {
-	return r.client.Get("/api/utility/text/transliterate", params)
-}
 
 // UtilityUnitsConvert - Quy đổi một giá trị sang một hoặc nhiều đơn vị...
 func (r *ChuyenDoiAndDinhDangResource) UtilityUnitsConvert(body interface{}) (map[string]interface{}, error) {
 	return r.client.Post("/api/utility/units/convert", body)
 }
 
-// UtilityUnitsConvert - Quy đổi một giá trị sang một hoặc nhiều đơn vị...
-func (r *ChuyenDoiAndDinhDangResource) UtilityUnitsConvert(params map[string]string) (map[string]interface{}, error) {
-	return r.client.Get("/api/utility/units/convert", params)
-}
 
 // UtilityUnitsDimensions - Danh mục 13 chiều đo quy đổi được: chiều dài
 func (r *ChuyenDoiAndDinhDangResource) UtilityUnitsDimensions(body interface{}) (map[string]interface{}, error) {

@@ -10,10 +10,6 @@ func (r *MangAndHaTangResource) GeoipBatch(params map[string]string) (map[string
 	return r.client.Get("/api/geoip/batch", params)
 }
 
-// GeoipBatch - Như `GET api/geoip/batch` nhưng nhận danh sách...
-func (r *MangAndHaTangResource) GeoipBatch(params map[string]string) (map[string]interface{}, error) {
-	return r.client.Get("/api/geoip/batch", params)
-}
 
 // GeoipLookup - Vị trí địa lý của một địa chỉ IPv4 hoặc IPv6:...
 func (r *MangAndHaTangResource) GeoipLookup(body interface{}) (map[string]interface{}, error) {
@@ -215,20 +211,12 @@ func (r *MangAndHaTangResource) WebriskBatch(params map[string]string) (map[stri
 	return r.client.Get("/api/webrisk/batch", params)
 }
 
-// WebriskBatch - Như `GET api/webrisk/batch` nhưng nhận danh sá...
-func (r *MangAndHaTangResource) WebriskBatch(params map[string]string) (map[string]interface{}, error) {
-	return r.client.Get("/api/webrisk/batch", params)
-}
 
 // WebriskLookup - Đối chiếu một URL với danh sách đe doạ của Goo...
 func (r *MangAndHaTangResource) WebriskLookup(body interface{}) (map[string]interface{}, error) {
 	return r.client.Post("/api/webrisk/lookup", body)
 }
 
-// WebriskLookup - Như `GET api/webrisk/lookup` nhưng nhận tham s...
-func (r *MangAndHaTangResource) WebriskLookup(params map[string]string) (map[string]interface{}, error) {
-	return r.client.Get("/api/webrisk/lookup", params)
-}
 
 // WebriskThreatTypes - Danh sách các loại đe doạ đối chiếu được
 func (r *MangAndHaTangResource) WebriskThreatTypes(body interface{}) (map[string]interface{}, error) {

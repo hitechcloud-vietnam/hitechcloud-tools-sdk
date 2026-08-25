@@ -3,19 +3,19 @@
 namespace HiTechCloud\Tools\Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
-use HiTechCloud\Tools\Client;
+use HiTechCloud\Tools\HiTechCloudTools;
 
 class HiTechCloudToolsTest extends TestCase
 {
     public function testClientCreation(): void
     {
-        $client = new Client('https://api-tools.hitechcloud.vn', 'test_api_key');
-        $this->assertInstanceOf(Client::class, $client);
+        $client = new HiTechCloudTools('https://api-tools.hitechcloud.vn', 'test_api_key');
+        $this->assertInstanceOf(HiTechCloudTools::class, $client);
     }
 
     public function testClientHasAllResources(): void
     {
-        $client = new Client('https://api-tools.hitechcloud.vn', 'test_api_key');
+        $client = new HiTechCloudTools('https://api-tools.hitechcloud.vn', 'test_api_key');
         $resources = [
             'mang_and_ha_tang', 'ten_mien_and_ssl', 'email_and_dns',
             'cong_cu_lap_trinh', 'seo_and_web', 'du_lieu_viet_nam',
