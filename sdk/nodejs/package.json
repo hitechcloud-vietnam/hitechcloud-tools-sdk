@@ -1,5 +1,5 @@
 {
-  "name": "hitechcloud-tools-sdk",
+  "name": "@hitechcloud-vietnam/hitechcloud-tools-sdk",
   "version": "1.0.0",
   "description": "Official Node.js SDK for HiTechCloud Tools API (455 endpoints)",
   "main": "src/index.js",
@@ -25,5 +25,8 @@
   },
   "devDependencies": {
     "jest": "^29.0.0"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   }
 }
