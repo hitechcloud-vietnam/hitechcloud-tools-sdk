@@ -30,3 +30,15 @@ Thumbs.db
 # Environment
 .env
 .env.local
+
+# Java build artifacts
+sdk/java/target/
+
+# PHP test artifacts
+sdk/php/.phpunit.result.cache
+
+# C# build artifacts
+sdk/csharp/HiTechCloud.Tools/bin/
+sdk/csharp/HiTechCloud.Tools/obj/
+sdk/csharp/Tests/bin/
+sdk/csharp/Tests/obj/
