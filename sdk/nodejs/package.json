@@ -1,0 +1,26 @@
+{
+  "name": "hitechcloud-tools-sdk",
+  "version": "1.0.0",
+  "description": "Official Node.js SDK for HiTechCloud Tools API (455 endpoints)",
+  "main": "src/index.js",
+  "types": "src/index.d.ts",
+  "scripts": {
+    "test": "jest",
+    "build": "tsc"
+  },
+  "keywords": [
+    "hitechcloud",
+    "api",
+    "sdk",
+    "tools",
+    "vietnam"
+  ],
+  "author": "HiTechCloud <support@hitechcloud.vn>",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "HiTechCloud Tools API",
+    "description": "455 endpoints across 15 groups for Vietnamese developers",
+    "version": "1.0.0",
+    "contact": {
+      "name": "HiTechCloud",
+      "url": "https://doc-api-tools.hitechcloud.vn",
+      "email": "support@hitechcloud.vn"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://api-tools.hitechcloud.vn",
+      "description": "Production"
+    }
+  ],
+  "security": [
+    {
+      "ApiKeyAuth": []
+    }
+  ],
+  "components": {
+    "securitySchemes": {
+      "ApiKeyAuth": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "X-API-Key"
+      }
+    }
+  },
+  "paths": {}
+}

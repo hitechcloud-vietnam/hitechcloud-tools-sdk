@@ -1,0 +1,21 @@
+{
+  "name": "hitechcloud/tools-sdk",
+  "description": "Official PHP SDK for HiTechCloud Tools API (455 endpoints)",
+  "type": "library",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "HiTechCloud\\Tools\\": "src/"
+    }
+  },
+  "require": {
+    "php": ">=8.0",
+    "guzzlehttp/guzzle": "^7.0"
+  },
+  "authors": [
+    {
+      "name": "HiTechCloud",
+      "email": "support@hitechcloud.vn"
+    }
+  ]
+}
