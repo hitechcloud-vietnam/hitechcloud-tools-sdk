@@ -76,3 +76,13 @@ class HiTechCloudTools:
 
     def __exit__(self, *args):
         self.close()
+
+
+    def __repr__(self) -> str:
+        return f"HiTechCloudTools(base_url={self._http.base_url!r})"
+
+    def __enter__(self):
+        return self
+
+    def __exit__(self, *args):
+        pass

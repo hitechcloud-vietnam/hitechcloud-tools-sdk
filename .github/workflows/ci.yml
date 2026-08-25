@@ -84,7 +84,7 @@ jobs:
       - uses: actions/setup-dotnet@v4
         with:
           dotnet-version: '8.0.x'
-      - run: cd sdk/csharp && dotnet test
+      - run: cd sdk/csharp && dotnet test Tests/Tests.csproj
 
   docker:
     runs-on: ubuntu-latest
