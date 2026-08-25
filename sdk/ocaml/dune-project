@@ -1,0 +1,7 @@
+(lang dune 3.0)
+(name hitechcloud_sdk)
+(version 0.1.0)
+(package
+ (name hitechcloud_sdk)
+ (synopsis "HiTechCloud SDK for OCaml")
+ (depends ocaml dune cohttp cohttp-lwt-unix lwt yojson uri))

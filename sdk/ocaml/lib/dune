@@ -1,0 +1,5 @@
+(library
+ (name hitechcloud_sdk)
+ (public_name hitechcloud_sdk)
+ (libraries cohttp cohttp-lwt-unix lwt yojson uri)
+ (modules http_client chuyen_doi_and_dinh_dang cong_cu_lap_trinh doanh_nghiep_and_thue du_lieu_viet_nam duoc_pham_and_y_te email_and_dns ma_hoa_and_kiem_tra mang_and_ha_tang phap_ly_and_thu_tuc qr_and_thanh_toan seo_and_web tai_chinh_and_ty_gia ten_mien_and_ssl thoi_gian_and_lich xuat_nhap_khau_and_logistics client))

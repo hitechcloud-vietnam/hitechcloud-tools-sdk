@@ -7,8 +7,6 @@ class SeoAndWebResource {
   domain_rank_batch(params) { return this._http.get('/api/domain/rank/batch', params); }
 
   /** GET /api/domain/rank/batch - Tra hạng cho tối đa 100 tên miền trong một lượ... */
-  domain_rank_batch(params) { return this._http.get('/api/domain/rank/batch', params); }
-
   /** POST /api/domain/rank/top - Nhóm tên miền dẫn đầu */
   domain_rank_top(data) { return this._http.post('/api/domain/rank/top', data); }
 

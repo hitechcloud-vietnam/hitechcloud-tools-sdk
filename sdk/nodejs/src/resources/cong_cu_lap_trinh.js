@@ -22,8 +22,6 @@ class CongCuLapTrinhResource {
   tools_dev_json_formatter(params) { return this._http.get('/api/tools/dev/json/formatter', params); }
 
   /** GET /api/tools/dev/json/formatter - Định dạng JSON qua thân yêu cầu */
-  tools_dev_json_formatter(params) { return this._http.get('/api/tools/dev/json/formatter', params); }
-
   /** POST /api/tools/dev/lorem/ipsum - Sinh đoạn văn mẫu để lấp chỗ khi dựng giao diệ... */
   tools_dev_lorem_ipsum(data) { return this._http.post('/api/tools/dev/lorem/ipsum', data); }
 
@@ -46,8 +44,6 @@ class CongCuLapTrinhResource {
   utility_file_identify(data) { return this._http.post('/api/utility/file/identify', data); }
 
   /** GET /api/utility/file/identify - Nhận dạng định dạng tệp từ những byte ĐẦU TIÊN */
-  utility_file_identify(params) { return this._http.get('/api/utility/file/identify', params); }
-
   /** POST /api/utility/file/mime - Kiểu MIME của một đuôi tệp */
   utility_file_mime(data) { return this._http.post('/api/utility/file/mime', data); }
 

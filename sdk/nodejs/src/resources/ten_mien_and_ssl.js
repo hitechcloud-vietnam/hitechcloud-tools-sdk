@@ -16,8 +16,6 @@ class TenMienAndSslResource {
   domain_check_2(data) { return this._http.post('/api/domain/check/2', data); }
 
   /** GET /api/domain/check - Kiểm tra tên miền còn trống hay đã đăng ký */
-  domain_check(params) { return this._http.get('/api/domain/check', params); }
-
   /** GET /api/domain/whois - Bản ghi WHOIS đầy đủ của tên miền */
   domain_whois(params) { return this._http.get('/api/domain/whois', params); }
 

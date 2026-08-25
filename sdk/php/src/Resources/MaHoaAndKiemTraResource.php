@@ -77,10 +77,6 @@ class MaHoaAndKiemTraResource extends BaseResource
     }
 
     /** GET /api/utility/checksum/container - Kiểm số công-ten-nơ theo ISO 6346 */
-    public function utility_checksum_container(array $params = []): array
-    {
-        return $this->http->get('/api/utility/checksum/container', $params);
-    }
 
     /** POST /api/utility/checksum/hash - Tổng kiểm tra của một khối dữ liệu: CRC-32 */
     public function utility_checksum_hash(array $data = []): array
@@ -89,10 +85,6 @@ class MaHoaAndKiemTraResource extends BaseResource
     }
 
     /** GET /api/utility/checksum/hash - Tổng kiểm tra của một khối dữ liệu: CRC-32 */
-    public function utility_checksum_hash(array $params = []): array
-    {
-        return $this->http->get('/api/utility/checksum/hash', $params);
-    }
 
     /** POST /api/utility/checksum/iban - Kiểm số tài khoản quốc tế theo ISO 13616: phép... */
     public function utility_checksum_iban(array $data = []): array
@@ -101,10 +93,6 @@ class MaHoaAndKiemTraResource extends BaseResource
     }
 
     /** GET /api/utility/checksum/iban - Kiểm số tài khoản quốc tế theo ISO 13616: phép... */
-    public function utility_checksum_iban(array $params = []): array
-    {
-        return $this->http->get('/api/utility/checksum/iban', $params);
-    }
 
     /** POST /api/utility/checksum/imo - Kiểm số hiệu tàu biển IMO — bảy chữ số */
     public function utility_checksum_imo(array $data = []): array
@@ -113,10 +101,6 @@ class MaHoaAndKiemTraResource extends BaseResource
     }
 
     /** GET /api/utility/checksum/imo - Kiểm số hiệu tàu biển IMO — bảy chữ số */
-    public function utility_checksum_imo(array $params = []): array
-    {
-        return $this->http->get('/api/utility/checksum/imo', $params);
-    }
 
     /** POST /api/utility/checksum/isbn - Kiểm ISBN-10 và ISBN-13 */
     public function utility_checksum_isbn(array $data = []): array
@@ -125,10 +109,6 @@ class MaHoaAndKiemTraResource extends BaseResource
     }
 
     /** GET /api/utility/checksum/isbn - Kiểm ISBN-10 và ISBN-13 */
-    public function utility_checksum_isbn(array $params = []): array
-    {
-        return $this->http->get('/api/utility/checksum/isbn', $params);
-    }
 
     /** POST /api/utility/checksum/issn - Kiểm mã ấn phẩm định kỳ ISSN theo modulo 11 */
     public function utility_checksum_issn(array $data = []): array
@@ -137,10 +117,6 @@ class MaHoaAndKiemTraResource extends BaseResource
     }
 
     /** GET /api/utility/checksum/issn - Kiểm mã ấn phẩm định kỳ ISSN theo modulo 11 */
-    public function utility_checksum_issn(array $params = []): array
-    {
-        return $this->http->get('/api/utility/checksum/issn', $params);
-    }
 
     /** POST /api/utility/checksum/luhn - Kiểm chữ số Luhn theo ISO/IEC 7812-1 */
     public function utility_checksum_luhn(array $data = []): array
@@ -149,10 +125,6 @@ class MaHoaAndKiemTraResource extends BaseResource
     }
 
     /** GET /api/utility/checksum/luhn - Kiểm chữ số Luhn theo ISO/IEC 7812-1 */
-    public function utility_checksum_luhn(array $params = []): array
-    {
-        return $this->http->get('/api/utility/checksum/luhn', $params);
-    }
 
     /** POST /api/utility/crypto/decode - Giải mã một chuỗi từ cơ số bất kỳ trong danh s... */
     public function utility_crypto_decode(array $data = []): array
@@ -161,10 +133,6 @@ class MaHoaAndKiemTraResource extends BaseResource
     }
 
     /** GET /api/utility/crypto/decode - Giải mã một chuỗi từ cơ số bất kỳ trong danh s... */
-    public function utility_crypto_decode(array $params = []): array
-    {
-        return $this->http->get('/api/utility/crypto/decode', $params);
-    }
 
     /** POST /api/utility/crypto/encode - Đổi dữ liệu sang một cơ số: base16 */
     public function utility_crypto_encode(array $data = []): array
@@ -173,10 +141,6 @@ class MaHoaAndKiemTraResource extends BaseResource
     }
 
     /** GET /api/utility/crypto/encode - Đổi dữ liệu sang một cơ số: base16 */
-    public function utility_crypto_encode(array $params = []): array
-    {
-        return $this->http->get('/api/utility/crypto/encode', $params);
-    }
 
     /** POST /api/utility/crypto/hmac - Băm có khoá theo RFC 2104 */
     public function utility_crypto_hmac(array $data = []): array
@@ -185,10 +149,6 @@ class MaHoaAndKiemTraResource extends BaseResource
     }
 
     /** GET /api/utility/crypto/hmac - Băm có khoá theo RFC 2104 */
-    public function utility_crypto_hmac(array $params = []): array
-    {
-        return $this->http->get('/api/utility/crypto/hmac', $params);
-    }
 
     /** POST /api/utility/crypto/hmac/verify - So một chữ ký webhook với chữ ký tính được */
     public function utility_crypto_hmac_verify(array $data = []): array
@@ -197,10 +157,6 @@ class MaHoaAndKiemTraResource extends BaseResource
     }
 
     /** GET /api/utility/crypto/hmac/verify - So một chữ ký webhook với chữ ký tính được */
-    public function utility_crypto_hmac_verify(array $params = []): array
-    {
-        return $this->http->get('/api/utility/crypto/hmac/verify', $params);
-    }
 
     /** POST /api/utility/crypto/jwt/sign - Ký một JWT theo RFC 7519 */
     public function utility_crypto_jwt_sign(array $data = []): array

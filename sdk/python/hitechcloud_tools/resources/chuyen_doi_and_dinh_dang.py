@@ -12,10 +12,6 @@ class ChuyenDoiAndDinhDangResource(BaseResource):
         """GET /api/barcode/gs1/parse - Bóc chuỗi phần tử in trên thùng hàng và nhãn k..."""
         return self._http.get("/api/barcode/gs1/parse", params or None)
 
-    def barcode_gs1_parse(self, **params) -> dict:
-        """GET /api/barcode/gs1/parse - Như bản GET nhưng nhận chuỗi trong thân yêu cầ..."""
-        return self._http.get("/api/barcode/gs1/parse", params or None)
-
     def barcode_prefix(self, **data) -> dict:
         """POST /api/barcode/prefix - Tra tổ chức đã cấp một dải mã theo ba chữ số đ..."""
         return self._http.post("/api/barcode/prefix", data or None)
@@ -26,10 +22,6 @@ class ChuyenDoiAndDinhDangResource(BaseResource):
 
     def barcode_validate(self, **params) -> dict:
         """GET /api/barcode/validate - Kiểm mã vạch: nhận diện loại (GTIN-8"""
-        return self._http.get("/api/barcode/validate", params or None)
-
-    def barcode_validate(self, **params) -> dict:
-        """GET /api/barcode/validate - Như bản GET nhưng nhận danh sách mã trong thân..."""
         return self._http.get("/api/barcode/validate", params or None)
 
     def opendata_text_inspect(self, **data) -> dict:
@@ -132,49 +124,25 @@ class ChuyenDoiAndDinhDangResource(BaseResource):
         """GET /api/utility/text/case - Đổi kiểu viết định danh: camelCase"""
         return self._http.get("/api/utility/text/case", params or None)
 
-    def utility_text_case(self, **params) -> dict:
-        """GET /api/utility/text/case - Đổi kiểu viết định danh: camelCase"""
-        return self._http.get("/api/utility/text/case", params or None)
-
     def utility_text_inspect(self, **data) -> dict:
         """POST /api/utility/text/inspect - Soi một đoạn văn bản: bốn cách đếm độ dài (byt..."""
         return self._http.post("/api/utility/text/inspect", data or None)
-
-    def utility_text_inspect(self, **params) -> dict:
-        """GET /api/utility/text/inspect - Soi một đoạn văn bản: bốn cách đếm độ dài (byt..."""
-        return self._http.get("/api/utility/text/inspect", params or None)
 
     def utility_text_normalize(self, **data) -> dict:
         """POST /api/utility/text/normalize - Chuẩn hoá Unicode về NFC"""
         return self._http.post("/api/utility/text/normalize", data or None)
 
-    def utility_text_normalize(self, **params) -> dict:
-        """GET /api/utility/text/normalize - Chuẩn hoá Unicode về NFC"""
-        return self._http.get("/api/utility/text/normalize", params or None)
-
     def utility_text_slug(self, **data) -> dict:
         """POST /api/utility/text/slug - Sinh chuỗi thân thiện với URL từ văn bản bất k..."""
         return self._http.post("/api/utility/text/slug", data or None)
-
-    def utility_text_slug(self, **params) -> dict:
-        """GET /api/utility/text/slug - Sinh chuỗi thân thiện với URL từ văn bản bất k..."""
-        return self._http.get("/api/utility/text/slug", params or None)
 
     def utility_text_transliterate(self, **data) -> dict:
         """POST /api/utility/text/transliterate - Chuyển tự giữa các hệ chữ viết: sang chữ Latin..."""
         return self._http.post("/api/utility/text/transliterate", data or None)
 
-    def utility_text_transliterate(self, **params) -> dict:
-        """GET /api/utility/text/transliterate - Chuyển tự giữa các hệ chữ viết: sang chữ Latin..."""
-        return self._http.get("/api/utility/text/transliterate", params or None)
-
     def utility_units_convert(self, **data) -> dict:
         """POST /api/utility/units/convert - Quy đổi một giá trị sang một hoặc nhiều đơn vị..."""
         return self._http.post("/api/utility/units/convert", data or None)
-
-    def utility_units_convert(self, **params) -> dict:
-        """GET /api/utility/units/convert - Quy đổi một giá trị sang một hoặc nhiều đơn vị..."""
-        return self._http.get("/api/utility/units/convert", params or None)
 
     def utility_units_dimensions(self, **data) -> dict:
         """POST /api/utility/units/dimensions - Danh mục 13 chiều đo quy đổi được: chiều dài"""

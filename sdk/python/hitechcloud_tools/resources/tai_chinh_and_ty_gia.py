@@ -48,10 +48,6 @@ class TaiChinhAndTyGiaResource(BaseResource):
         """GET /api/utility/finance/cashflow - Giá trị hiện tại ròng và tỉ suất hoàn vốn nội..."""
         return self._http.get("/api/utility/finance/cashflow", params or None)
 
-    def utility_finance_cashflow(self, **params) -> dict:
-        """GET /api/utility/finance/cashflow - Giá trị hiện tại ròng và tỉ suất hoàn vốn nội..."""
-        return self._http.get("/api/utility/finance/cashflow", params or None)
-
     def utility_finance_compound(self, **data) -> dict:
         """POST /api/utility/finance/compound - Lãi kép có hoặc không có khoản góp định kỳ"""
         return self._http.post("/api/utility/finance/compound", data or None)

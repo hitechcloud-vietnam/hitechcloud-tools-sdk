@@ -20,10 +20,6 @@ class TenMienAndSslResource(BaseResource):
         """POST /api/domain/check/2 - domain / check"""
         return self._http.post("/api/domain/check/2", data or None)
 
-    def domain_check(self, **params) -> dict:
-        """GET /api/domain/check - Kiểm tra tên miền còn trống hay đã đăng ký"""
-        return self._http.get("/api/domain/check", params or None)
-
     def domain_whois(self, **params) -> dict:
         """GET /api/domain/whois - Bản ghi WHOIS đầy đủ của tên miền"""
         return self._http.get("/api/domain/whois", params or None)

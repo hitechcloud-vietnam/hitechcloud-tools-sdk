@@ -1,0 +1,10 @@
+Package: hitechcloud.tools.sdk
+Title: HiTechCloud hitechcloud-tools-sdk SDK
+Version: 0.1.0
+Authors@R: person("HiTechCloud", email = "sdk@hitechcloud.vn", role = c("aut", "cre"))
+Description: R client for the HiTechCloud API.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Imports:
+    httr2,
+    jsonlite

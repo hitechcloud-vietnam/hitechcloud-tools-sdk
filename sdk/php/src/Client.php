@@ -39,20 +39,20 @@ class HiTechCloudTools
     public function __construct(string $baseUrl = 'https://api-tools.hitechcloud.vn', ?string $apiKey = null, int $timeout = 30)
     {
         $http = new HttpClient($baseUrl, $apiKey, $timeout);
-        $this->$mang_and_ha_tang = new MangAndHaTangResource($http);
-        $this->$ten_mien_and_ssl = new TenMienAndSslResource($http);
-        $this->$email_and_dns = new EmailAndDnsResource($http);
-        $this->$cong_cu_lap_trinh = new CongCuLapTrinhResource($http);
-        $this->$seo_and_web = new SeoAndWebResource($http);
-        $this->$du_lieu_viet_nam = new DuLieuVietNamResource($http);
-        $this->$xuat_nhap_khau_and_logistics = new XuatNhapKhauAndLogisticsResource($http);
-        $this->$duoc_pham_and_y_te = new DuocPhamAndYTeResource($http);
-        $this->$ma_hoa_and_kiem_tra = new MaHoaAndKiemTraResource($http);
-        $this->$chuyen_doi_and_dinh_dang = new ChuyenDoiAndDinhDangResource($http);
-        $this->$thoi_gian_and_lich = new ThoiGianAndLichResource($http);
-        $this->$tai_chinh_and_ty_gia = new TaiChinhAndTyGiaResource($http);
-        $this->$phap_ly_and_thu_tuc = new PhapLyAndThuTucResource($http);
-        $this->$qr_and_thanh_toan = new QrAndThanhToanResource($http);
-        $this->$doanh_nghiep_and_thue = new DoanhNghiepAndThueResource($http);
+        $this->mang_and_ha_tang = new MangAndHaTangResource($http);
+        $this->ten_mien_and_ssl = new TenMienAndSslResource($http);
+        $this->email_and_dns = new EmailAndDnsResource($http);
+        $this->cong_cu_lap_trinh = new CongCuLapTrinhResource($http);
+        $this->seo_and_web = new SeoAndWebResource($http);
+        $this->du_lieu_viet_nam = new DuLieuVietNamResource($http);
+        $this->xuat_nhap_khau_and_logistics = new XuatNhapKhauAndLogisticsResource($http);
+        $this->duoc_pham_and_y_te = new DuocPhamAndYTeResource($http);
+        $this->ma_hoa_and_kiem_tra = new MaHoaAndKiemTraResource($http);
+        $this->chuyen_doi_and_dinh_dang = new ChuyenDoiAndDinhDangResource($http);
+        $this->thoi_gian_and_lich = new ThoiGianAndLichResource($http);
+        $this->tai_chinh_and_ty_gia = new TaiChinhAndTyGiaResource($http);
+        $this->phap_ly_and_thu_tuc = new PhapLyAndThuTucResource($http);
+        $this->qr_and_thanh_toan = new QrAndThanhToanResource($http);
+        $this->doanh_nghiep_and_thue = new DoanhNghiepAndThueResource($http);
     }
 }

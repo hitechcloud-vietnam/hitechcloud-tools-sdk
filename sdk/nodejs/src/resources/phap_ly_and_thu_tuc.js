@@ -7,14 +7,10 @@ class PhapLyAndThuTucResource {
   dauthau_detail(params) { return this._http.get('/api/dauthau/detail', params); }
 
   /** GET /api/dauthau/detail - Chi tiết gói thầu */
-  dauthau_detail(params) { return this._http.get('/api/dauthau/detail', params); }
-
   /** POST /api/dauthau/summary - Danh sách gói thầu theo bộ lọc */
   dauthau_summary(data) { return this._http.post('/api/dauthau/summary', data); }
 
   /** GET /api/dauthau/summary - Cùng dữ liệu tóm tắt gói thầu */
-  dauthau_summary(params) { return this._http.get('/api/dauthau/summary', params); }
-
   /** POST /api/gov/agencies - Danh mục cơ quan ban hành có văn bản trong bản... */
   gov_agencies(data) { return this._http.post('/api/gov/agencies', data); }
 

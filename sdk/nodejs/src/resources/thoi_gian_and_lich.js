@@ -31,8 +31,6 @@ class ThoiGianAndLichResource {
   utility_time_business_days(params) { return this._http.get('/api/utility/time/business/days', params); }
 
   /** GET /api/utility/time/business/days - Đếm số ngày làm việc giữa hai ngày */
-  utility_time_business_days(params) { return this._http.get('/api/utility/time/business/days', params); }
-
   /** POST /api/utility/time/diff - Khoảng cách giữa hai mốc */
   utility_time_diff(data) { return this._http.post('/api/utility/time/diff', data); }
 

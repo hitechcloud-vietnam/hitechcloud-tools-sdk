@@ -59,10 +59,6 @@ class ThoiGianAndLichResource extends BaseResource
     }
 
     /** GET /api/utility/time/business/days - Đếm số ngày làm việc giữa hai ngày */
-    public function utility_time_business_days(array $params = []): array
-    {
-        return $this->http->get('/api/utility/time/business/days', $params);
-    }
 
     /** POST /api/utility/time/diff - Khoảng cách giữa hai mốc */
     public function utility_time_diff(array $data = []): array

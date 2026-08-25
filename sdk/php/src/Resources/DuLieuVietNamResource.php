@@ -41,10 +41,6 @@ class DuLieuVietNamResource extends BaseResource
     }
 
     /** GET /api/opendata/admin/resolve - Cùng phép đoán như bản GET nhưng nhận nhiều đị... */
-    public function opendata_admin_resolve(array $params = []): array
-    {
-        return $this->http->get('/api/opendata/admin/resolve', $params);
-    }
 
     /** POST /api/opendata/admin/search - Tìm đơn vị hành chính theo tên */
     public function opendata_admin_search(array $data = []): array
@@ -161,10 +157,6 @@ class DuLieuVietNamResource extends BaseResource
     }
 
     /** GET /api/vn/convert - Chuyển cả lô tối đa 25 địa chỉ cũ sang địa giớ... */
-    public function vn_convert(array $params = []): array
-    {
-        return $this->http->get('/api/vn/convert', $params);
-    }
 
     /** POST /api/vn/divisions - Toàn bộ cây danh mục hành chính hiện hành tron... */
     public function vn_divisions(array $data = []): array

@@ -28,10 +28,6 @@ class DuLieuVietNamResource(BaseResource):
         """GET /api/opendata/admin/resolve - Đoán tỉnh và xã/phường từ một chuỗi địa chỉ tự..."""
         return self._http.get("/api/opendata/admin/resolve", params or None)
 
-    def opendata_admin_resolve(self, **params) -> dict:
-        """GET /api/opendata/admin/resolve - Cùng phép đoán như bản GET nhưng nhận nhiều đị..."""
-        return self._http.get("/api/opendata/admin/resolve", params or None)
-
     def opendata_admin_search(self, **data) -> dict:
         """POST /api/opendata/admin/search - Tìm đơn vị hành chính theo tên"""
         return self._http.post("/api/opendata/admin/search", data or None)
@@ -106,10 +102,6 @@ class DuLieuVietNamResource(BaseResource):
 
     def vn_convert(self, **params) -> dict:
         """GET /api/vn/convert - Chuyển một địa chỉ theo địa giới CŨ (trước 01/..."""
-        return self._http.get("/api/vn/convert", params or None)
-
-    def vn_convert(self, **params) -> dict:
-        """GET /api/vn/convert - Chuyển cả lô tối đa 25 địa chỉ cũ sang địa giớ..."""
         return self._http.get("/api/vn/convert", params or None)
 
     def vn_divisions(self, **data) -> dict:

@@ -17,10 +17,6 @@ class ChuyenDoiAndDinhDangResource extends BaseResource
     }
 
     /** GET /api/barcode/gs1/parse - Như bản GET nhưng nhận chuỗi trong thân yêu cầ... */
-    public function barcode_gs1_parse(array $params = []): array
-    {
-        return $this->http->get('/api/barcode/gs1/parse', $params);
-    }
 
     /** POST /api/barcode/prefix - Tra tổ chức đã cấp một dải mã theo ba chữ số đ... */
     public function barcode_prefix(array $data = []): array
@@ -41,10 +37,6 @@ class ChuyenDoiAndDinhDangResource extends BaseResource
     }
 
     /** GET /api/barcode/validate - Như bản GET nhưng nhận danh sách mã trong thân... */
-    public function barcode_validate(array $params = []): array
-    {
-        return $this->http->get('/api/barcode/validate', $params);
-    }
 
     /** POST /api/opendata/text/inspect - Bóc chuỗi thành từng ký tự kèm mã điểm Unicode */
     public function opendata_text_inspect(array $data = []): array
@@ -197,10 +189,6 @@ class ChuyenDoiAndDinhDangResource extends BaseResource
     }
 
     /** GET /api/utility/text/case - Đổi kiểu viết định danh: camelCase */
-    public function utility_text_case(array $params = []): array
-    {
-        return $this->http->get('/api/utility/text/case', $params);
-    }
 
     /** POST /api/utility/text/inspect - Soi một đoạn văn bản: bốn cách đếm độ dài (byt... */
     public function utility_text_inspect(array $data = []): array
@@ -209,10 +197,6 @@ class ChuyenDoiAndDinhDangResource extends BaseResource
     }
 
     /** GET /api/utility/text/inspect - Soi một đoạn văn bản: bốn cách đếm độ dài (byt... */
-    public function utility_text_inspect(array $params = []): array
-    {
-        return $this->http->get('/api/utility/text/inspect', $params);
-    }
 
     /** POST /api/utility/text/normalize - Chuẩn hoá Unicode về NFC */
     public function utility_text_normalize(array $data = []): array
@@ -221,10 +205,6 @@ class ChuyenDoiAndDinhDangResource extends BaseResource
     }
 
     /** GET /api/utility/text/normalize - Chuẩn hoá Unicode về NFC */
-    public function utility_text_normalize(array $params = []): array
-    {
-        return $this->http->get('/api/utility/text/normalize', $params);
-    }
 
     /** POST /api/utility/text/slug - Sinh chuỗi thân thiện với URL từ văn bản bất k... */
     public function utility_text_slug(array $data = []): array
@@ -233,10 +213,6 @@ class ChuyenDoiAndDinhDangResource extends BaseResource
     }
 
     /** GET /api/utility/text/slug - Sinh chuỗi thân thiện với URL từ văn bản bất k... */
-    public function utility_text_slug(array $params = []): array
-    {
-        return $this->http->get('/api/utility/text/slug', $params);
-    }
 
     /** POST /api/utility/text/transliterate - Chuyển tự giữa các hệ chữ viết: sang chữ Latin... */
     public function utility_text_transliterate(array $data = []): array
@@ -245,10 +221,6 @@ class ChuyenDoiAndDinhDangResource extends BaseResource
     }
 
     /** GET /api/utility/text/transliterate - Chuyển tự giữa các hệ chữ viết: sang chữ Latin... */
-    public function utility_text_transliterate(array $params = []): array
-    {
-        return $this->http->get('/api/utility/text/transliterate', $params);
-    }
 
     /** POST /api/utility/units/convert - Quy đổi một giá trị sang một hoặc nhiều đơn vị... */
     public function utility_units_convert(array $data = []): array
@@ -257,10 +229,6 @@ class ChuyenDoiAndDinhDangResource extends BaseResource
     }
 
     /** GET /api/utility/units/convert - Quy đổi một giá trị sang một hoặc nhiều đơn vị... */
-    public function utility_units_convert(array $params = []): array
-    {
-        return $this->http->get('/api/utility/units/convert', $params);
-    }
 
     /** POST /api/utility/units/dimensions - Danh mục 13 chiều đo quy đổi được: chiều dài */
     public function utility_units_dimensions(array $data = []): array

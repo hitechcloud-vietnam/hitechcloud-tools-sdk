@@ -11,10 +11,6 @@ class PhapLyAndThuTucResource extends BaseResource
     }
 
     /** GET /api/dauthau/detail - Chi tiết gói thầu */
-    public function dauthau_detail(array $params = []): array
-    {
-        return $this->http->get('/api/dauthau/detail', $params);
-    }
 
     /** POST /api/dauthau/summary - Danh sách gói thầu theo bộ lọc */
     public function dauthau_summary(array $data = []): array
@@ -23,10 +19,6 @@ class PhapLyAndThuTucResource extends BaseResource
     }
 
     /** GET /api/dauthau/summary - Cùng dữ liệu tóm tắt gói thầu */
-    public function dauthau_summary(array $params = []): array
-    {
-        return $this->http->get('/api/dauthau/summary', $params);
-    }
 
     /** POST /api/gov/agencies - Danh mục cơ quan ban hành có văn bản trong bản... */
     public function gov_agencies(array $data = []): array

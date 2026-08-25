@@ -8,17 +8,9 @@ class PhapLyAndThuTucResource(BaseResource):
         """GET /api/dauthau/detail - Chi tiết một gói thầu: bên mời thầu"""
         return self._http.get("/api/dauthau/detail", params or None)
 
-    def dauthau_detail(self, **params) -> dict:
-        """GET /api/dauthau/detail - Chi tiết gói thầu"""
-        return self._http.get("/api/dauthau/detail", params or None)
-
     def dauthau_summary(self, **data) -> dict:
         """POST /api/dauthau/summary - Danh sách gói thầu theo bộ lọc"""
         return self._http.post("/api/dauthau/summary", data or None)
-
-    def dauthau_summary(self, **params) -> dict:
-        """GET /api/dauthau/summary - Cùng dữ liệu tóm tắt gói thầu"""
-        return self._http.get("/api/dauthau/summary", params or None)
 
     def gov_agencies(self, **data) -> dict:
         """POST /api/gov/agencies - Danh mục cơ quan ban hành có văn bản trong bản..."""

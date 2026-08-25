@@ -8,10 +8,6 @@ class SeoAndWebResource(BaseResource):
         """GET /api/domain/rank/batch - Tra hạng cho tối đa 100 tên miền trong một lượ..."""
         return self._http.get("/api/domain/rank/batch", params or None)
 
-    def domain_rank_batch(self, **params) -> dict:
-        """GET /api/domain/rank/batch - Tra hạng cho tối đa 100 tên miền trong một lượ..."""
-        return self._http.get("/api/domain/rank/batch", params or None)
-
     def domain_rank_top(self, **data) -> dict:
         """POST /api/domain/rank/top - Nhóm tên miền dẫn đầu"""
         return self._http.post("/api/domain/rank/top", data or None)

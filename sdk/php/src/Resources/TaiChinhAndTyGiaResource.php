@@ -71,10 +71,6 @@ class TaiChinhAndTyGiaResource extends BaseResource
     }
 
     /** GET /api/utility/finance/cashflow - Giá trị hiện tại ròng và tỉ suất hoàn vốn nội... */
-    public function utility_finance_cashflow(array $params = []): array
-    {
-        return $this->http->get('/api/utility/finance/cashflow', $params);
-    }
 
     /** POST /api/utility/finance/compound - Lãi kép có hoặc không có khoản góp định kỳ */
     public function utility_finance_compound(array $data = []): array

@@ -52,89 +52,45 @@ class MaHoaAndKiemTraResource(BaseResource):
         """GET /api/utility/checksum/container - Kiểm số công-ten-nơ theo ISO 6346"""
         return self._http.get("/api/utility/checksum/container", params or None)
 
-    def utility_checksum_container(self, **params) -> dict:
-        """GET /api/utility/checksum/container - Kiểm số công-ten-nơ theo ISO 6346"""
-        return self._http.get("/api/utility/checksum/container", params or None)
-
     def utility_checksum_hash(self, **data) -> dict:
         """POST /api/utility/checksum/hash - Tổng kiểm tra của một khối dữ liệu: CRC-32"""
         return self._http.post("/api/utility/checksum/hash", data or None)
-
-    def utility_checksum_hash(self, **params) -> dict:
-        """GET /api/utility/checksum/hash - Tổng kiểm tra của một khối dữ liệu: CRC-32"""
-        return self._http.get("/api/utility/checksum/hash", params or None)
 
     def utility_checksum_iban(self, **data) -> dict:
         """POST /api/utility/checksum/iban - Kiểm số tài khoản quốc tế theo ISO 13616: phép..."""
         return self._http.post("/api/utility/checksum/iban", data or None)
 
-    def utility_checksum_iban(self, **params) -> dict:
-        """GET /api/utility/checksum/iban - Kiểm số tài khoản quốc tế theo ISO 13616: phép..."""
-        return self._http.get("/api/utility/checksum/iban", params or None)
-
     def utility_checksum_imo(self, **data) -> dict:
         """POST /api/utility/checksum/imo - Kiểm số hiệu tàu biển IMO — bảy chữ số"""
         return self._http.post("/api/utility/checksum/imo", data or None)
-
-    def utility_checksum_imo(self, **params) -> dict:
-        """GET /api/utility/checksum/imo - Kiểm số hiệu tàu biển IMO — bảy chữ số"""
-        return self._http.get("/api/utility/checksum/imo", params or None)
 
     def utility_checksum_isbn(self, **data) -> dict:
         """POST /api/utility/checksum/isbn - Kiểm ISBN-10 và ISBN-13"""
         return self._http.post("/api/utility/checksum/isbn", data or None)
 
-    def utility_checksum_isbn(self, **params) -> dict:
-        """GET /api/utility/checksum/isbn - Kiểm ISBN-10 và ISBN-13"""
-        return self._http.get("/api/utility/checksum/isbn", params or None)
-
     def utility_checksum_issn(self, **data) -> dict:
         """POST /api/utility/checksum/issn - Kiểm mã ấn phẩm định kỳ ISSN theo modulo 11"""
         return self._http.post("/api/utility/checksum/issn", data or None)
-
-    def utility_checksum_issn(self, **params) -> dict:
-        """GET /api/utility/checksum/issn - Kiểm mã ấn phẩm định kỳ ISSN theo modulo 11"""
-        return self._http.get("/api/utility/checksum/issn", params or None)
 
     def utility_checksum_luhn(self, **data) -> dict:
         """POST /api/utility/checksum/luhn - Kiểm chữ số Luhn theo ISO/IEC 7812-1"""
         return self._http.post("/api/utility/checksum/luhn", data or None)
 
-    def utility_checksum_luhn(self, **params) -> dict:
-        """GET /api/utility/checksum/luhn - Kiểm chữ số Luhn theo ISO/IEC 7812-1"""
-        return self._http.get("/api/utility/checksum/luhn", params or None)
-
     def utility_crypto_decode(self, **data) -> dict:
         """POST /api/utility/crypto/decode - Giải mã một chuỗi từ cơ số bất kỳ trong danh s..."""
         return self._http.post("/api/utility/crypto/decode", data or None)
-
-    def utility_crypto_decode(self, **params) -> dict:
-        """GET /api/utility/crypto/decode - Giải mã một chuỗi từ cơ số bất kỳ trong danh s..."""
-        return self._http.get("/api/utility/crypto/decode", params or None)
 
     def utility_crypto_encode(self, **data) -> dict:
         """POST /api/utility/crypto/encode - Đổi dữ liệu sang một cơ số: base16"""
         return self._http.post("/api/utility/crypto/encode", data or None)
 
-    def utility_crypto_encode(self, **params) -> dict:
-        """GET /api/utility/crypto/encode - Đổi dữ liệu sang một cơ số: base16"""
-        return self._http.get("/api/utility/crypto/encode", params or None)
-
     def utility_crypto_hmac(self, **data) -> dict:
         """POST /api/utility/crypto/hmac - Băm có khoá theo RFC 2104"""
         return self._http.post("/api/utility/crypto/hmac", data or None)
 
-    def utility_crypto_hmac(self, **params) -> dict:
-        """GET /api/utility/crypto/hmac - Băm có khoá theo RFC 2104"""
-        return self._http.get("/api/utility/crypto/hmac", params or None)
-
     def utility_crypto_hmac_verify(self, **data) -> dict:
         """POST /api/utility/crypto/hmac/verify - So một chữ ký webhook với chữ ký tính được"""
         return self._http.post("/api/utility/crypto/hmac/verify", data or None)
-
-    def utility_crypto_hmac_verify(self, **params) -> dict:
-        """GET /api/utility/crypto/hmac/verify - So một chữ ký webhook với chữ ký tính được"""
-        return self._http.get("/api/utility/crypto/hmac/verify", params or None)
 
     def utility_crypto_jwt_sign(self, **data) -> dict:
         """POST /api/utility/crypto/jwt/sign - Ký một JWT theo RFC 7519"""

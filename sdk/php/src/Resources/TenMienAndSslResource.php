@@ -29,10 +29,6 @@ class TenMienAndSslResource extends BaseResource
     }
 
     /** GET /api/domain/check - Kiểm tra tên miền còn trống hay đã đăng ký */
-    public function domain_check(array $params = []): array
-    {
-        return $this->http->get('/api/domain/check', $params);
-    }
 
     /** GET /api/domain/whois - Bản ghi WHOIS đầy đủ của tên miền */
     public function domain_whois(array $params = []): array

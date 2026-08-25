@@ -10,8 +10,6 @@ class ChuyenDoiAndDinhDangResource {
   barcode_gs1_parse(params) { return this._http.get('/api/barcode/gs1/parse', params); }
 
   /** GET /api/barcode/gs1/parse - Như bản GET nhưng nhận chuỗi trong thân yêu cầ... */
-  barcode_gs1_parse(params) { return this._http.get('/api/barcode/gs1/parse', params); }
-
   /** POST /api/barcode/prefix - Tra tổ chức đã cấp một dải mã theo ba chữ số đ... */
   barcode_prefix(data) { return this._http.post('/api/barcode/prefix', data); }
 
@@ -22,8 +20,6 @@ class ChuyenDoiAndDinhDangResource {
   barcode_validate(params) { return this._http.get('/api/barcode/validate', params); }
 
   /** GET /api/barcode/validate - Như bản GET nhưng nhận danh sách mã trong thân... */
-  barcode_validate(params) { return this._http.get('/api/barcode/validate', params); }
-
   /** POST /api/opendata/text/inspect - Bóc chuỗi thành từng ký tự kèm mã điểm Unicode */
   opendata_text_inspect(data) { return this._http.post('/api/opendata/text/inspect', data); }
 
@@ -100,38 +96,26 @@ class ChuyenDoiAndDinhDangResource {
   utility_text_case(params) { return this._http.get('/api/utility/text/case', params); }
 
   /** GET /api/utility/text/case - Đổi kiểu viết định danh: camelCase */
-  utility_text_case(params) { return this._http.get('/api/utility/text/case', params); }
-
   /** POST /api/utility/text/inspect - Soi một đoạn văn bản: bốn cách đếm độ dài (byt... */
   utility_text_inspect(data) { return this._http.post('/api/utility/text/inspect', data); }
 
   /** GET /api/utility/text/inspect - Soi một đoạn văn bản: bốn cách đếm độ dài (byt... */
-  utility_text_inspect(params) { return this._http.get('/api/utility/text/inspect', params); }
-
   /** POST /api/utility/text/normalize - Chuẩn hoá Unicode về NFC */
   utility_text_normalize(data) { return this._http.post('/api/utility/text/normalize', data); }
 
   /** GET /api/utility/text/normalize - Chuẩn hoá Unicode về NFC */
-  utility_text_normalize(params) { return this._http.get('/api/utility/text/normalize', params); }
-
   /** POST /api/utility/text/slug - Sinh chuỗi thân thiện với URL từ văn bản bất k... */
   utility_text_slug(data) { return this._http.post('/api/utility/text/slug', data); }
 
   /** GET /api/utility/text/slug - Sinh chuỗi thân thiện với URL từ văn bản bất k... */
-  utility_text_slug(params) { return this._http.get('/api/utility/text/slug', params); }
-
   /** POST /api/utility/text/transliterate - Chuyển tự giữa các hệ chữ viết: sang chữ Latin... */
   utility_text_transliterate(data) { return this._http.post('/api/utility/text/transliterate', data); }
 
   /** GET /api/utility/text/transliterate - Chuyển tự giữa các hệ chữ viết: sang chữ Latin... */
-  utility_text_transliterate(params) { return this._http.get('/api/utility/text/transliterate', params); }
-
   /** POST /api/utility/units/convert - Quy đổi một giá trị sang một hoặc nhiều đơn vị... */
   utility_units_convert(data) { return this._http.post('/api/utility/units/convert', data); }
 
   /** GET /api/utility/units/convert - Quy đổi một giá trị sang một hoặc nhiều đơn vị... */
-  utility_units_convert(params) { return this._http.get('/api/utility/units/convert', params); }
-
   /** POST /api/utility/units/dimensions - Danh mục 13 chiều đo quy đổi được: chiều dài */
   utility_units_dimensions(data) { return this._http.post('/api/utility/units/dimensions', data); }
 

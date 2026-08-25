@@ -41,10 +41,6 @@ class CongCuLapTrinhResource extends BaseResource
     }
 
     /** GET /api/tools/dev/json/formatter - Định dạng JSON qua thân yêu cầu */
-    public function tools_dev_json_formatter(array $params = []): array
-    {
-        return $this->http->get('/api/tools/dev/json/formatter', $params);
-    }
 
     /** POST /api/tools/dev/lorem/ipsum - Sinh đoạn văn mẫu để lấp chỗ khi dựng giao diệ... */
     public function tools_dev_lorem_ipsum(array $data = []): array
@@ -89,10 +85,6 @@ class CongCuLapTrinhResource extends BaseResource
     }
 
     /** GET /api/utility/file/identify - Nhận dạng định dạng tệp từ những byte ĐẦU TIÊN */
-    public function utility_file_identify(array $params = []): array
-    {
-        return $this->http->get('/api/utility/file/identify', $params);
-    }
 
     /** POST /api/utility/file/mime - Kiểu MIME của một đuôi tệp */
     public function utility_file_mime(array $data = []): array

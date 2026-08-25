@@ -40,68 +40,46 @@ class MaHoaAndKiemTraResource {
   utility_checksum_container(params) { return this._http.get('/api/utility/checksum/container', params); }
 
   /** GET /api/utility/checksum/container - Kiểm số công-ten-nơ theo ISO 6346 */
-  utility_checksum_container(params) { return this._http.get('/api/utility/checksum/container', params); }
-
   /** POST /api/utility/checksum/hash - Tổng kiểm tra của một khối dữ liệu: CRC-32 */
   utility_checksum_hash(data) { return this._http.post('/api/utility/checksum/hash', data); }
 
   /** GET /api/utility/checksum/hash - Tổng kiểm tra của một khối dữ liệu: CRC-32 */
-  utility_checksum_hash(params) { return this._http.get('/api/utility/checksum/hash', params); }
-
   /** POST /api/utility/checksum/iban - Kiểm số tài khoản quốc tế theo ISO 13616: phép... */
   utility_checksum_iban(data) { return this._http.post('/api/utility/checksum/iban', data); }
 
   /** GET /api/utility/checksum/iban - Kiểm số tài khoản quốc tế theo ISO 13616: phép... */
-  utility_checksum_iban(params) { return this._http.get('/api/utility/checksum/iban', params); }
-
   /** POST /api/utility/checksum/imo - Kiểm số hiệu tàu biển IMO — bảy chữ số */
   utility_checksum_imo(data) { return this._http.post('/api/utility/checksum/imo', data); }
 
   /** GET /api/utility/checksum/imo - Kiểm số hiệu tàu biển IMO — bảy chữ số */
-  utility_checksum_imo(params) { return this._http.get('/api/utility/checksum/imo', params); }
-
   /** POST /api/utility/checksum/isbn - Kiểm ISBN-10 và ISBN-13 */
   utility_checksum_isbn(data) { return this._http.post('/api/utility/checksum/isbn', data); }
 
   /** GET /api/utility/checksum/isbn - Kiểm ISBN-10 và ISBN-13 */
-  utility_checksum_isbn(params) { return this._http.get('/api/utility/checksum/isbn', params); }
-
   /** POST /api/utility/checksum/issn - Kiểm mã ấn phẩm định kỳ ISSN theo modulo 11 */
   utility_checksum_issn(data) { return this._http.post('/api/utility/checksum/issn', data); }
 
   /** GET /api/utility/checksum/issn - Kiểm mã ấn phẩm định kỳ ISSN theo modulo 11 */
-  utility_checksum_issn(params) { return this._http.get('/api/utility/checksum/issn', params); }
-
   /** POST /api/utility/checksum/luhn - Kiểm chữ số Luhn theo ISO/IEC 7812-1 */
   utility_checksum_luhn(data) { return this._http.post('/api/utility/checksum/luhn', data); }
 
   /** GET /api/utility/checksum/luhn - Kiểm chữ số Luhn theo ISO/IEC 7812-1 */
-  utility_checksum_luhn(params) { return this._http.get('/api/utility/checksum/luhn', params); }
-
   /** POST /api/utility/crypto/decode - Giải mã một chuỗi từ cơ số bất kỳ trong danh s... */
   utility_crypto_decode(data) { return this._http.post('/api/utility/crypto/decode', data); }
 
   /** GET /api/utility/crypto/decode - Giải mã một chuỗi từ cơ số bất kỳ trong danh s... */
-  utility_crypto_decode(params) { return this._http.get('/api/utility/crypto/decode', params); }
-
   /** POST /api/utility/crypto/encode - Đổi dữ liệu sang một cơ số: base16 */
   utility_crypto_encode(data) { return this._http.post('/api/utility/crypto/encode', data); }
 
   /** GET /api/utility/crypto/encode - Đổi dữ liệu sang một cơ số: base16 */
-  utility_crypto_encode(params) { return this._http.get('/api/utility/crypto/encode', params); }
-
   /** POST /api/utility/crypto/hmac - Băm có khoá theo RFC 2104 */
   utility_crypto_hmac(data) { return this._http.post('/api/utility/crypto/hmac', data); }
 
   /** GET /api/utility/crypto/hmac - Băm có khoá theo RFC 2104 */
-  utility_crypto_hmac(params) { return this._http.get('/api/utility/crypto/hmac', params); }
-
   /** POST /api/utility/crypto/hmac/verify - So một chữ ký webhook với chữ ký tính được */
   utility_crypto_hmac_verify(data) { return this._http.post('/api/utility/crypto/hmac/verify', data); }
 
   /** GET /api/utility/crypto/hmac/verify - So một chữ ký webhook với chữ ký tính được */
-  utility_crypto_hmac_verify(params) { return this._http.get('/api/utility/crypto/hmac/verify', params); }
-
   /** POST /api/utility/crypto/jwt/sign - Ký một JWT theo RFC 7519 */
   utility_crypto_jwt_sign(data) { return this._http.post('/api/utility/crypto/jwt/sign', data); }
 

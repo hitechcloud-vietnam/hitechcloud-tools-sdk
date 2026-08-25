@@ -1,0 +1,72 @@
+#import <Foundation/Foundation.h>
+#import "HCHTTPClient.h"
+
+/// Dữ liệu Việt Nam
+@interface HCDuLieuVietNam : NSObject
+- (instancetype)initWithHttpClient:(HCHTTPClient *)httpClient;
+- (void)countries:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)opendataAdminPostal:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)opendataAdminProvinces:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)opendataAdminProvinces2:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)opendataAdminProvincesWards:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)opendataAdminResolve:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)opendataAdminSearch:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)opendataAdminWards:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)opendataGeoProvinces:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)opendataGeoProvinces2:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)opendataGeoProvincesBoundary:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)opendataGeoReverse:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)opendataStatus:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)v2CheckViolation:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)v2ConvertAddress:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)v2Districts:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)v2Provinces:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)v2Villages:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)v2Wards:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)vnProvinces:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)vnProvincesList:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)vnProvinces2:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)vnWards:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)vnWards2:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)vnConvert:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)vnDivisions:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)vnLegacyProvinces:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)vnLegacyProvincesDistricts:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)vnLegacyWards:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)vnLookup:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)vnNumberToWords:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)vnNumberToWordsMoney:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)vnNumbering:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)vnNumberingCheck:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)vnNumberingSources:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)vnPlates:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)vnPlatesClassification:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)vnPlatesDecode:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)vnPlatesSearch:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)vnPlatesSources:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)vnPlates2:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)vnPostcodeStatus:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)vnProvinces3:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)vnProvinces4:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)vnProvincesWards:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)vnSearch:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)vnVsicConvert:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)vnVsicSearch:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)vnVsicTree:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)vnVsic:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)vnWards3:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)vnWards4:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)vnWardsLegacy:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)vncdcCountries:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)vncdcDistricts:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)vncdcEthnicities:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)vncdcProvinces:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)vncdcRegions:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)vncdcReligions:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)vncdcVaccines:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)vncdcWards:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)vncdcWards715:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)weatherCurrent:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)weatherForecast:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+
+@end

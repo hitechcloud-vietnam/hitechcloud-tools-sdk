@@ -7,8 +7,6 @@ class MangAndHaTangResource {
   geoip_batch(params) { return this._http.get('/api/geoip/batch', params); }
 
   /** GET /api/geoip/batch - Như `GET api/geoip/batch` nhưng nhận danh sách... */
-  geoip_batch(params) { return this._http.get('/api/geoip/batch', params); }
-
   /** POST /api/geoip/lookup - Vị trí địa lý của một địa chỉ IPv4 hoặc IPv6:... */
   geoip_lookup(data) { return this._http.post('/api/geoip/lookup', data); }
 
@@ -130,14 +128,10 @@ class MangAndHaTangResource {
   webrisk_batch(params) { return this._http.get('/api/webrisk/batch', params); }
 
   /** GET /api/webrisk/batch - Như `GET api/webrisk/batch` nhưng nhận danh sá... */
-  webrisk_batch(params) { return this._http.get('/api/webrisk/batch', params); }
-
   /** POST /api/webrisk/lookup - Đối chiếu một URL với danh sách đe doạ của Goo... */
   webrisk_lookup(data) { return this._http.post('/api/webrisk/lookup', data); }
 
   /** GET /api/webrisk/lookup - Như `GET api/webrisk/lookup` nhưng nhận tham s... */
-  webrisk_lookup(params) { return this._http.get('/api/webrisk/lookup', params); }
-
   /** POST /api/webrisk/threat/types - Danh sách các loại đe doạ đối chiếu được */
   webrisk_threat_types(data) { return this._http.post('/api/webrisk/threat/types', data); }
 

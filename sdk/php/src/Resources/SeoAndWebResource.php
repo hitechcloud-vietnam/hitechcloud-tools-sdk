@@ -11,10 +11,6 @@ class SeoAndWebResource extends BaseResource
     }
 
     /** GET /api/domain/rank/batch - Tra hạng cho tối đa 100 tên miền trong một lượ... */
-    public function domain_rank_batch(array $params = []): array
-    {
-        return $this->http->get('/api/domain/rank/batch', $params);
-    }
 
     /** POST /api/domain/rank/top - Nhóm tên miền dẫn đầu */
     public function domain_rank_top(array $data = []): array

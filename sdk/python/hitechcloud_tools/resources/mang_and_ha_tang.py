@@ -8,10 +8,6 @@ class MangAndHaTangResource(BaseResource):
         """GET /api/geoip/batch - Tra vị trí địa lý cho nhiều địa chỉ IP trong m..."""
         return self._http.get("/api/geoip/batch", params or None)
 
-    def geoip_batch(self, **params) -> dict:
-        """GET /api/geoip/batch - Như `GET api/geoip/batch` nhưng nhận danh sách..."""
-        return self._http.get("/api/geoip/batch", params or None)
-
     def geoip_lookup(self, **data) -> dict:
         """POST /api/geoip/lookup - Vị trí địa lý của một địa chỉ IPv4 hoặc IPv6:..."""
         return self._http.post("/api/geoip/lookup", data or None)
@@ -172,17 +168,9 @@ class MangAndHaTangResource(BaseResource):
         """GET /api/webrisk/batch - Đối chiếu nhiều URL trong một lượt"""
         return self._http.get("/api/webrisk/batch", params or None)
 
-    def webrisk_batch(self, **params) -> dict:
-        """GET /api/webrisk/batch - Như `GET api/webrisk/batch` nhưng nhận danh sá..."""
-        return self._http.get("/api/webrisk/batch", params or None)
-
     def webrisk_lookup(self, **data) -> dict:
         """POST /api/webrisk/lookup - Đối chiếu một URL với danh sách đe doạ của Goo..."""
         return self._http.post("/api/webrisk/lookup", data or None)
-
-    def webrisk_lookup(self, **params) -> dict:
-        """GET /api/webrisk/lookup - Như `GET api/webrisk/lookup` nhưng nhận tham s..."""
-        return self._http.get("/api/webrisk/lookup", params or None)
 
     def webrisk_threat_types(self, **data) -> dict:
         """POST /api/webrisk/threat/types - Danh sách các loại đe doạ đối chiếu được"""

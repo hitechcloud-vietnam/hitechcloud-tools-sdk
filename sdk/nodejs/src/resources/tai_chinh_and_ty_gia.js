@@ -37,8 +37,6 @@ class TaiChinhAndTyGiaResource {
   utility_finance_cashflow(params) { return this._http.get('/api/utility/finance/cashflow', params); }
 
   /** GET /api/utility/finance/cashflow - Giá trị hiện tại ròng và tỉ suất hoàn vốn nội... */
-  utility_finance_cashflow(params) { return this._http.get('/api/utility/finance/cashflow', params); }
-
   /** POST /api/utility/finance/compound - Lãi kép có hoặc không có khoản góp định kỳ */
   utility_finance_compound(data) { return this._http.post('/api/utility/finance/compound', data); }
 

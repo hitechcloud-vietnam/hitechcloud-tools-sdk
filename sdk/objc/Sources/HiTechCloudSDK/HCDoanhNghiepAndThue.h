@@ -1,0 +1,72 @@
+#import <Foundation/Foundation.h>
+#import "HCHTTPClient.h"
+
+/// Doanh nghiệp & Thuế
+@interface HCDoanhNghiepAndThue : NSObject
+- (instancetype)initWithHttpClient:(HCHTTPClient *)httpClient;
+- (void)baocaodientu:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)baocaodientuSimple:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)dkkdCheck:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)dkkd:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)ecommerceCategories:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)ecommerceCompanies:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)ecommerceRecords:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)ecommerceStatus:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)ecommerceWebsites:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)ecommerceWebsites2:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)economyCompare:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)economyCountries:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)economyCountry:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)economyCountryIndicator:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)economyCountryIndicators:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)economyIndicators:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)entityIdDuns:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)entityIdLegalForms:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)entityIdLegalForms2:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)entityIdResolve:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)entityIdResolveBatch:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)entityIdValidate:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)entityIdXref:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)leiAutocomplete:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)leiSearch:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)lei:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)leiChildren:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)leiParents:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)licenceFormContracts:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)licenceFormContractsRecords:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)licenceFormContractsSectors:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)licenceMlm:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)licenceMlmRecords:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)licenceMlm2:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)licenceStatus:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)masothue:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)opengovConstructionDatasets:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)opengovConstructionPublications:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)opengovCustomsExchangeRates:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)opengovCustomsHsCodes:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)opengovEnvScales:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)opengovEnvStations:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)opengovEnvStations2:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)opengovRegistryResearchOrganisations:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)opengovRegistrySecuritiesFirms:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)opengovRegistrySecuritiesFirmsFacets:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)opengovRegistrySecuritiesFirms2:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)opengovSscBranches:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)opengovSscFundManagement:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)opengovSscPersonnel:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)opengovSscPersonnel2:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)opengovStatisticsDatabases:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)opengovStatisticsDatabasesTables:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)opengovStatisticsTables:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)opengovStatisticsTablesData:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)pdfSignatureAnalyze:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)taxBusiness:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)taxIndividual:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)thongtin:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)ukCompaniesSearch:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)ukCompanies:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)ukCompaniesFilings:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)ukCompaniesOfficers:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+- (void)ukCompaniesOwners:(nullable NSDictionary *)params completion:(HCCompletionBlock)completion;
+
+@end

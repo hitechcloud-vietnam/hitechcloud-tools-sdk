@@ -11,10 +11,6 @@ class MangAndHaTangResource extends BaseResource
     }
 
     /** GET /api/geoip/batch - Như `GET api/geoip/batch` nhưng nhận danh sách... */
-    public function geoip_batch(array $params = []): array
-    {
-        return $this->http->get('/api/geoip/batch', $params);
-    }
 
     /** POST /api/geoip/lookup - Vị trí địa lý của một địa chỉ IPv4 hoặc IPv6:... */
     public function geoip_lookup(array $data = []): array
@@ -257,10 +253,6 @@ class MangAndHaTangResource extends BaseResource
     }
 
     /** GET /api/webrisk/batch - Như `GET api/webrisk/batch` nhưng nhận danh sá... */
-    public function webrisk_batch(array $params = []): array
-    {
-        return $this->http->get('/api/webrisk/batch', $params);
-    }
 
     /** POST /api/webrisk/lookup - Đối chiếu một URL với danh sách đe doạ của Goo... */
     public function webrisk_lookup(array $data = []): array
@@ -269,10 +261,6 @@ class MangAndHaTangResource extends BaseResource
     }
 
     /** GET /api/webrisk/lookup - Như `GET api/webrisk/lookup` nhưng nhận tham s... */
-    public function webrisk_lookup(array $params = []): array
-    {
-        return $this->http->get('/api/webrisk/lookup', $params);
-    }
 
     /** POST /api/webrisk/threat/types - Danh sách các loại đe doạ đối chiếu được */
     public function webrisk_threat_types(array $data = []): array

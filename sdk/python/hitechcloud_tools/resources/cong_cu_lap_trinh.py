@@ -28,10 +28,6 @@ class CongCuLapTrinhResource(BaseResource):
         """GET /api/tools/dev/json/formatter - Định dạng và kiểm tra cú pháp JSON"""
         return self._http.get("/api/tools/dev/json/formatter", params or None)
 
-    def tools_dev_json_formatter(self, **params) -> dict:
-        """GET /api/tools/dev/json/formatter - Định dạng JSON qua thân yêu cầu"""
-        return self._http.get("/api/tools/dev/json/formatter", params or None)
-
     def tools_dev_lorem_ipsum(self, **data) -> dict:
         """POST /api/tools/dev/lorem/ipsum - Sinh đoạn văn mẫu để lấp chỗ khi dựng giao diệ..."""
         return self._http.post("/api/tools/dev/lorem/ipsum", data or None)
@@ -59,10 +55,6 @@ class CongCuLapTrinhResource(BaseResource):
     def utility_file_identify(self, **data) -> dict:
         """POST /api/utility/file/identify - Nhận dạng định dạng tệp từ những byte ĐẦU TIÊN"""
         return self._http.post("/api/utility/file/identify", data or None)
-
-    def utility_file_identify(self, **params) -> dict:
-        """GET /api/utility/file/identify - Nhận dạng định dạng tệp từ những byte ĐẦU TIÊN"""
-        return self._http.get("/api/utility/file/identify", params or None)
 
     def utility_file_mime(self, **data) -> dict:
         """POST /api/utility/file/mime - Kiểu MIME của một đuôi tệp"""

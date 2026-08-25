@@ -40,10 +40,6 @@ class ThoiGianAndLichResource(BaseResource):
         """GET /api/utility/time/business/days - Đếm số ngày làm việc giữa hai ngày"""
         return self._http.get("/api/utility/time/business/days", params or None)
 
-    def utility_time_business_days(self, **params) -> dict:
-        """GET /api/utility/time/business/days - Đếm số ngày làm việc giữa hai ngày"""
-        return self._http.get("/api/utility/time/business/days", params or None)
-
     def utility_time_diff(self, **data) -> dict:
         """POST /api/utility/time/diff - Khoảng cách giữa hai mốc"""
         return self._http.post("/api/utility/time/diff", data or None)
